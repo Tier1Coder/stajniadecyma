@@ -5,7 +5,7 @@ import type { ReactNode } from 'react';
 import { NEWS } from './aktualnosci/news';
 
 const siteDescription =
-  'Stajnia Decyma - nauka jazdy konnej w woj. lubuskim (Sulechów, Świebodzin, Darnawa). Karnety, półkolonie, rajdy i imprezy okolicznościowe.';
+  'Stajnia Decyma - jazda konna, szkółka jeździecka w woj. lubuskim (Świebodzin / Sulechów). Nauka jazdy konnej, karnety, półkolonie i imprezy okolicznościowe.';
 
 export const metadata = {
   title: 'Stajnia Decyma',
@@ -14,7 +14,7 @@ export const metadata = {
   icons: { icon: '/favicon.ico' },
   alternates: { canonical: 'https://stajniadecyma.pl/' },
   keywords:
-    'stajnia decyma, jazda konna, szkółka jeździecka, Sulechów, Świebodzin, Lubuskie, Darnawa, karnety, półkolonie, rajdy konne',
+  'stajnia decyma, stajnia decyma Sulechów, stajnia decyma Darnawa, jazda konna, nauka jazdy konnej, kurs jazdy konnej, szkółka jeździecka, instruktor jazdy konnej, Sulechów, Świebodzin, Darnawa, Lubuskie, jazdy konne, przejażdżki konne, rajdy konne, karnety, półkolonie jeździeckie, obozy jeździeckie, zajęcia jeździeckie dla dzieci, imprezy okolicznościowe, przejażdżki w terenie',
 };
 
 function buildJsonLd() {
@@ -58,9 +58,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <meta property="og:title" content="Stajnia Decyma" />
         <meta property="og:description" content={siteDescription} />
+  <meta property="og:locale" content="pl_PL" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://stajniadecyma.pl/" />
         <meta property="og:image" content="/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Stajnia Decyma" />
+  <meta name="twitter:description" content={siteDescription} />
+  <link rel="alternate" href="https://stajniadecyma.pl/" hrefLang="pl" />
+  <meta name="geo.region" content="PL-08" />
+  <meta name="geo.placename" content="Darnawa" />
         <meta itemProp="image" content="/logo.png" />
         <meta name="twitter:image" content="/logo.png" />
 
@@ -71,7 +78,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           dangerouslySetInnerHTML={{ __html: buildJsonLd() }}
         />
 
-        {/* LocalBusiness JSON-LD for local SEO */}
+        {/* LocalBusiness JSON-LD for local SEO (static) */}
         <script
           type="application/ld+json"
           // eslint-disable-next-line react/no-danger
@@ -83,7 +90,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               image: 'https://stajniadecyma.pl/logo.png',
               '@id': 'https://stajniadecyma.pl',
               url: 'https://stajniadecyma.pl',
-              telephone: '+48795759410',
+              telephone: '+48 795 759 410',
               email: 'stajniadecyma@icloud.com',
               address: {
                 '@type': 'PostalAddress',
@@ -95,6 +102,25 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               },
               areaServed: ['Sulechów', 'Świebodzin', 'Lubuskie'],
               sameAs: ['https://www.facebook.com/profile.php?id=100093287093369'],
+            }),
+          }}
+        />
+
+        {/* Website JSON-LD (basic) */}
+        <script
+          type="application/ld+json"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'Stajnia Decyma',
+              url: 'https://stajniadecyma.pl/',
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: 'https://stajniadecyma.pl/?s={search_term_string}',
+                'query-input': 'required name=search_term_string',
+              },
             }),
           }}
         />

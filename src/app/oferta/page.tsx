@@ -1,6 +1,7 @@
 export const metadata = {
   title: 'Oferta | Stajnia Decyma',
-  description: 'Oferta jazdy konnej, nauka jeździectwa i hippoterapia w Stajni Decyma — Darnawa. Obsługujemy Sulechów, Świebodzin i całe woj. lubuskie.',
+  description: 'Oferta Stajni Decyma: jazdy indywidualne, karnety, półkolonie, imprezy i usługi dodatkowe. Obsługujemy Sulechów, Świebodzin i okolice.',
+  keywords: ['jazda konna sulechów', 'jazda konna świebodzin', 'oferta stajnia decyma', 'karnety jeździeckie'],
 };
 
 export default function OfertaPage() {
@@ -8,14 +9,11 @@ export default function OfertaPage() {
     <div className="page-bg">
       <section className="card card--text">
         <div className="wrap">
-          <h1>Oferta — jazda konna w Darnawie (Sulechów, Świebodzin)</h1>
-          <p>Nasza oferta skierowana jest do mieszkańców Sulechowa, Świebodzina i całego województwa lubuskiego.</p>
+          <h1>Oferta Stajni Decyma — zajęcia i usługi jeździeckie (Sulechów, Świebodzin)</h1>
           <p>
-            W Stajni Decyma dbamy o to, aby każdy – niezależnie od wieku czy poziomu doświadczenia –
-            mógł znaleźć coś dla siebie. Oferujemy zarówno pierwsze spotkania z końmi,
-            jak i regularne treningi oraz jazdy w terenie. Nasze zajęcia prowadzone są w
-            kameralnej atmosferze, z naciskiem na bezpieczeństwo, rozwój umiejętności
-            i radość z obcowania z końmi.
+            W Stajni Decyma dbamy o to, aby każdy – niezależnie od wieku czy poziomu doświadczenia – mógł znaleźć
+            coś dla siebie. Oferujemy treningi, lekcje indywidualne i grupowe oraz zajęcia terenowe dla mieszkańców
+            Sulechowa, Świebodzina i okolic woj. lubuskiego.
           </p>
 
           <h2>Cennik zajęć</h2>

@@ -1,5 +1,4 @@
 import DOMPurify from 'isomorphic-dompurify';
-import Link from 'next/link';
 import Image from 'next/image';
 import { NEWS } from './news';
 
@@ -19,19 +18,17 @@ export default function AktualnosciPage() {
           <div className="news-grid">
             {posts.map(post => (
               <article key={post.id} className="news-card">
-                <Link href={`/aktualnosci/${post.id}`} className="news-link">
-                  <div className="news-image">
-                    <Image src={post.image} alt={post.title} width={400} height={300} />
-                  </div>
-                  <div className="news-body">
-                    <h2 className="news-title">{post.title}</h2>
-                    <time className="news-date">{post.date}</time>
-                    <div
-                      className="news-desc"
-                      dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.desc) }}
-                    />
-                  </div>
-                </Link>
+                <div className="news-image">
+                  <Image src={post.image} alt={post.title} width={400} height={300} />
+                </div>
+                <div className="news-body">
+                  <h2 className="news-title">{post.title}</h2>
+                  <time className="news-date">{post.date}</time>
+                  <div
+                    className="news-desc"
+                    dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.desc) }}
+                  />
+                </div>
               </article>
             ))}
           </div>
