@@ -211,3 +211,39 @@ pnpm test:e2e        # Playwright tests
 - Prefer Server Components and route handlers for data access.
 - Keep Prisma client as a singleton (`lib/db.ts`) to avoid connection storms in dev.
 - Add at least one smoke e2e test for each new top-level feature.
+
+## SEO (Instrukcja szybkiego wdrożenia)
+
+1) Meta i treści
+- Upewnij się, że każda ważna strona ma unikalny `title` i `meta description`.
+- W projekcie przykładowo zaktualizowano `src/app/layout.tsx` i strony `page.tsx` by mieć opisowe meta.
+
+2) Sitemap i robots
+- Plik `public/robots.txt` istnieje i wskazuje na `https://stajniadecyma.pl/sitemap.xml`.
+- Aby odświeżyć sitemap z aktualnościami uruchom skrypt:
+
+```bash
+pnpm ts-node scripts/generate-sitemap.ts
+```
+
+3) Google Search Console & Analytics
+- Podłącz domenę do Google Search Console i prześlij `sitemap.xml`.
+- Aby włączyć Google Analytics dodaj `NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX` do `.env`.
+
+4) Structured Data
+- W `src/app/layout.tsx` dodano prosty JSON-LD (schema.org) typu `SportsActivityLocation`.
+
+5) Treść i słowa kluczowe
+- Pisz unikalne opisy w nagłówkach (H1-H3) i treści; używaj naturalnych fraz (np. "jazda konna Lubuskie", "półkolonie jeździeckie").
+
+6) Regularne aktualizacje
+- Publikuj aktualności (sekcja `src/app/aktualnosci/news.ts`) i odśwież sitemapę po dodaniu nowych wpisów.
+
+7) Kolejne kroki (zalecane)
+- Zarejestruj serwis w Google Search Console.
+- Dodaj rekordy Open Graph i Twitter Card (już częściowo dodane w layout).
+- Rozważ dodanie hreflang jeśli planujesz wielojęzyczność.
+
+Jeśli chcesz, mogę teraz:
+- wygenerować pełną sitemapę zawierającą wszystkie wpisy news automatycznie i zdeployować zmiany, lub
+- dodać dedykowane meta tags dla poszczególnych wpisów news (np. dynamiczne strony wpisów).

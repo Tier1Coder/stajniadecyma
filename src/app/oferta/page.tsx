@@ -1,11 +1,15 @@
-export const metadata = { title: 'Oferta | Stajnia Decyma' };
+export const metadata = {
+  title: 'Oferta | Stajnia Decyma',
+  description: 'Oferta jazdy konnej, nauka jeździectwa i hippoterapia w Stajni Decyma — Darnawa. Obsługujemy Sulechów, Świebodzin i całe woj. lubuskie.',
+};
 
 export default function OfertaPage() {
   return (
     <div className="page-bg">
       <section className="card card--text">
         <div className="wrap">
-          <h1>Oferta</h1>
+          <h1>Oferta — jazda konna w Darnawie (Sulechów, Świebodzin)</h1>
+          <p>Nasza oferta skierowana jest do mieszkańców Sulechowa, Świebodzina i całego województwa lubuskiego.</p>
           <p>
             W Stajni Decyma dbamy o to, aby każdy – niezależnie od wieku czy poziomu doświadczenia –
             mógł znaleźć coś dla siebie. Oferujemy zarówno pierwsze spotkania z końmi,

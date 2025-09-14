@@ -1,6 +1,11 @@
 import Image from 'next/image';
 
-export const metadata = { title: 'Stajnia Decyma' };
+export const metadata = {
+  title: 'Stajnia Decyma — Stajnia i szkoła jeździecka w Darnawie',
+  description:
+    'Stajnia Decyma w Darnawie — jazdy konne, nauka jeździectwa, hipoterapia i półkolonie. Obsługujemy Sulechów, Świebodzin oraz całe woj. lubuskie.',
+  keywords: ['stajnia decyma', 'jazda konna sulechów', 'jazda konna świebodzin', 'stajnia lubuskie', 'szkoła jeździecka lubuskie'],
+};
 
 export default function HomePage() {
   return (
@@ -17,11 +22,11 @@ export default function HomePage() {
         <div className="wrap">
           <div className="hero">
             <div className="hero__text">
+              <h1>Stajnia Decyma — jazda konna w Darnawie (Sulechów, Świebodzin)</h1>
               <p>
-                Zapraszamy do Stajni Decyma – miejsca, w którym pasja do koni spotyka się z gościnnością i naturą.
-                Oferujemy naukę jazdy konnej dla dzieci i dorosłych, rekreacyjne wypady w teren, imprezy okolicznościowe
-                i nie tylko. Jeśli szukasz wypoczynku z dala od zgiełku miasta, nasza skromna stajnia będzie idealnym
-                wyborem. Sprawdź naszą ofertę i przekonaj się, jak wyjątkowy może być czas spędzony w siodle i w otoczeniu przyrody.
+                Zapraszamy do Stajni Decyma — szkoły jeździeckiej w Darnawie, obsługującej mieszkańców Sulechowa,
+                Świebodzina i okolic woj. lubuskiego. Oferujemy lekcje dla dzieci i dorosłych, karnety, półkolonie
+                oraz treningi terenowe.
               </p>
             </div>
 
