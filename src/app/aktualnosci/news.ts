@@ -423,7 +423,7 @@ export const NEWS: NewsPost[] = [
    </ul>
    <p> Soboty będą dniami w których głównie będą odbywać się treningi 2 osobowe dla karnetowiczów oraz stałych klientów którzy przychodzą na jazdy regularnie.</p>
    <p> Pozostałe osoby, które nie mają możliwości ustalenia stałego terminu zapraszamy w pozostałe dni tygodnia - obowiązuje zasada "kto pierwszy ten lepszy".</p>
-   <p> Zapisy prosimy dokonywać poprzez SMS, whatsapp lub messenger, nie zawsze jesteśmy pod telefonem a na wiadomości napewno odpiszemy. </p>
+   <p> Zapisy prosimy dokonywać poprzez SMS, whatsapp lub messenger, nie zawsze jesteśmy pod telefonem, a na wiadomości na pewno odpiszemy. </p>
    `
   },
   {
