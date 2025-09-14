@@ -51,10 +51,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="pl">
       <head>
         <title>Stajnia Decyma</title>
-        <meta name="description" content={siteDescription} />
-        <meta name="robots" content="index, follow" />
+  <meta name="description" content={siteDescription} />
         <meta name="keywords" content={metadata.keywords} />
-        <link rel="canonical" href="https://stajniadecyma.pl/" />
+    {/* Note: canonical and robots are set per-page via route metadata to avoid forcing
+      every page to canonicalize to the homepage. Do not add global canonical/robots here. */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <meta property="og:title" content="Stajnia Decyma" />
         <meta property="og:description" content={siteDescription} />
