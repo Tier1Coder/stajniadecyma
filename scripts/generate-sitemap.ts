@@ -43,9 +43,9 @@ function build() {
     { loc: 'https://stajniadecyma.pl/kontakt', changefreq: 'monthly', priority: '0.6' },
   ];
 
-  let body = pages.map(p => `  <url>\n    <loc>${p.loc}</loc>\n    <changefreq>${p.changefreq}</changefreq>\n    <priority>${p.priority}</priority>\n  </url>\n`).join('');
+  let body = pages.map((p) => `  <url>\n    <loc>${p.loc}</loc>\n    <changefreq>${p.changefreq}</changefreq>\n    <priority>${p.priority}</priority>\n  </url>\n`).join('');
 
-  const news = [...NEWS].sort((a,b)=> b.date.localeCompare(a.date)).slice(0,20);
+  const news = [...NEWS].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 20);
   for (const n of news) {
     const url = `https://stajniadecyma.pl/aktualnosci#${n.id}`;
     body += `  <url>\n    <loc>${url}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.5</priority>\n    <lastmod>${n.date}</lastmod>\n  </url>\n`;
