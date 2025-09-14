@@ -18,8 +18,8 @@ export default function KontaktPage() {
               <ul className="contact-list">
                 <li><strong>Telefon:</strong> <a href="tel:+48795759410">+48 795 759 410</a></li>
                 <li><strong>E-mail:</strong> <a href="mailto:stajniadecyma@icloud.com">stajniadecyma@icloud.com</a></li>
-                <li><strong>Adres:</strong> Stajnia Decyma, 66-235 Darnawa 28</li>
-                <li><strong>Obsługujemy:</strong> Sulechów, Świebodzin i okolice (woj. lubuskie)</li>
+                <li><strong>Adres:</strong> Stajnia Decyma, 66-213 Darnawa 28</li>
+                <li><strong>Okolica:</strong> Sulechów, Świebodzin i okolice (woj. lubuskie)</li>
                 <li><strong>Godziny:</strong> pn–pt 9:00–19:00, sob–niedz 10:00–17:00</li>
                 <li>
                   <strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=100093287093369" target="_blank" rel="noopener noreferrer">Stajnia Decyma na Facebooku</a>
