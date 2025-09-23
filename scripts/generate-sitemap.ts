@@ -47,8 +47,10 @@ function build() {
 
   const news = [...NEWS].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 20);
   for (const n of news) {
-    const url = `https://stajniadecyma.pl/aktualnosci#${n.id}`;
-    body += `  <url>\n    <loc>${url}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.5</priority>\n    <lastmod>${n.date}</lastmod>\n  </url>\n`;
+    const url = `https://stajniadecyma.pl/aktualnosci/${n.id}`;
+  // ignore urls containing hash fragments just in case some source supplies them
+  if (url.includes('#')) continue;
+  body += `  <url>\n    <loc>${url}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.5</priority>\n    <lastmod>${n.date}</lastmod>\n  </url>\n`;
   }
 
   fs.writeFileSync(sitemapPath, header + body + footer, 'utf8');

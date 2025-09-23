@@ -1,10 +1,12 @@
 import DOMPurify from 'isomorphic-dompurify';
 import Image from 'next/image';
+import Link from 'next/link';
 import { NEWS } from './news';
 
 export const metadata = {
   title: 'Aktualności | Stajnia Decyma',
-  description: 'Aktualności ze Stajni Decyma — najnowsze wydarzenia, turnusy, rajdy i informacje o zajęciach.'
+  description: 'Aktualności ze Stajni Decyma — najnowsze wydarzenia, turnusy, rajdy i informacje o zajęciach.',
+  alternates: { canonical: 'https://stajniadecyma.pl/aktualnosci' },
 };
 
 export default function AktualnosciPage() {
@@ -17,7 +19,7 @@ export default function AktualnosciPage() {
           <h1>Aktualności i wydarzenia w Stajni Decyma</h1>
           <div className="news-grid">
             {posts.map(post => (
-              <article key={post.id} className="news-card">
+              <Link key={post.id} href={`/aktualnosci/${post.id}`} className="news-card">
                 <div className="news-image">
                   <Image src={post.image} alt={post.title} width={400} height={300} />
                 </div>
@@ -29,7 +31,7 @@ export default function AktualnosciPage() {
                     dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.desc) }}
                   />
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>

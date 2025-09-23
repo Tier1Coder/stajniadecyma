@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 export const metadata = {
-  title: 'Stajnia Decyma — szkoła jeździecka w Darnawie',
+  title: 'Stajnia Decyma — szkółka jeździecka w Darnawie',
   description:
     'Stajnia Decyma — jazdy konne, nauka jeździectwa, półkolonie i rajdy. Obsługujemy Sulechów, Świebodzin i okolice w woj. lubuskim.',
   keywords: ['stajnia decyma', 'jazda konna sulechów', 'jazda konna świebodzin', 'stajnia darnawa', 'stajnia lubuskie'],

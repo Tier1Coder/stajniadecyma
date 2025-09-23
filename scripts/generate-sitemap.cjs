@@ -44,7 +44,7 @@ function build() {
 
   const news = NEWS.slice().sort((a, b) => b.date.localeCompare(a.date));
   for (const n of news) {
-    const url = `https://stajniadecyma.pl/aktualnosci#${n.id}`;
+  const url = `https://stajniadecyma.pl/aktualnosci/${n.id}`;
     body += `  <url>\n    <loc>${url}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.5</priority>\n    <lastmod>${n.date}</lastmod>\n  </url>\n`;
   }
 

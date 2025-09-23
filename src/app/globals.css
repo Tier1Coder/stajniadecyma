@@ -13,6 +13,22 @@
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --bg: #eeeff1;
+  --surface: #fff;
+  --line: #e7e7ea;
+  --text: #383838;
+  --gold: #c79a45;
+  --gold-strong: #b6882e;
+  --shadow: 0 8px 24px rgba(0,0,0,.04), 0 1px 0 rgba(0,0,0,.04);
+  --radius: 5px;
+  --wrap: 1040px;
+}
+
+* {
+  box-sizing: border-box;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -102,6 +118,26 @@ body{
 
 .menu-btn {
   display: none;
+
+.news-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.news-card:link,
+.news-card:visited {
+  text-decoration: none;
+  color: inherit;
+}
+.news-card:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+  transition: transform 0.12s ease;
+}
+.news-card:focus {
+  outline: 3px solid rgba(199,154,69,0.15);
+  outline-offset: 3px;
+}
   background: var(--gold);
   border: 1.5px solid var(--gold);
   color: var(--black);
@@ -338,6 +374,7 @@ body{
     font-size: 16px;
   }
 }
+
 
 .btn-primary{
   display:inline-flex; align-items:center; justify-content:center;
@@ -625,6 +662,51 @@ body{
   padding: 18px;
 }
 
+.news-card a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.news-card a:hover,
+.news-card a:link,
+.news-card a:visited {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.news-card a:focus-visible,
+.news-card a:focus {
+  outline: 3px solid rgba(199,154,69,0.18);
+  outline-offset: 3px;
+}
+
+.news-card a,
+.news-card a * {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+a.news-card,
+a.news-card * {
+  text-decoration: none !important;
+  color: inherit !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+.news-card a,
+.news-body a,
+.news-desc a,
+.news-title a,
+a.news-card {
+  color: var(--gold) !important;
+}
+.news-card a:hover,
+.news-body a:hover,
+.news-desc a:hover,
+.news-title a:hover,
+a.news-card:hover {
+  color: var(--gold-strong) !important;
+}
+
 .news-title {
   font-size: 22px;
   font-weight: 700;
@@ -635,7 +717,7 @@ body{
 .news-date {
   display: block;
   font-size: 14px;
-  color: #6b7280;
+  color: var(--text);
   margin-bottom: 10px;
 }
 
@@ -644,6 +726,20 @@ body{
   font-size: 17px;
   line-height: 1.7;
   color: var(--gold);
+}
+
+.news-body a, .news-desc a, .news-title a {
+  text-decoration: none !important;
+  -webkit-text-decoration: none !important;
+  color: inherit !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+.news-body a *, .news-desc a *, .news-title a * {
+  text-decoration: none !important;
+  color: inherit !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
 }
 
 .news-desc ul {

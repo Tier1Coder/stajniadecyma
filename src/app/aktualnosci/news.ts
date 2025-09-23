@@ -446,5 +446,12 @@ export const NEWS: NewsPost[] = [
     date: '2025-09-01',
     image: '/news/zawody-skok.jpg',
     desc: 'A tak bawiliśmy się wczoraj na naszych pierwszych zawodach skokowych. Dziękujemy za tak liczne przybycie, widowisko pełne wrażeń i emocji!'
+  },
+  {
+    id: 62,
+    title: 'Rajd na zakończenie lata',
+    date: '2025-09-21',
+    image: '/news/rajd2.jpg',
+    desc: 'Lato oficjalnie pożegnane i na jesień przyszedł czas, dla nas to oczywiście nie koniec świata, bo jesiennymi i zimowymi terenami nie gardzimy, tymczasem na chwilę uciekamy, kalendarz i telefon w domu zostawiamy, co oczywiście nie oznacza że nie możecie do nas pisać, jak tylko z urlopu wrócimy to na wszelkie wiadomości odpowiemy. Do usłyszenia w czwartek!'
   }
 ]
