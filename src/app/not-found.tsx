@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
   title: '404 — Nie znaleziono | Stajnia Decyma',
@@ -24,7 +25,7 @@ export default function NotFound() {
             </div>
 
             <div className="hero__image">
-              <img src="/logo.png" alt="Stajnia Decyma" style={{ width: '100%', height: 'auto' }} />
+              <Image src="/logo.png" alt="Stajnia Decyma" width={800} height={400} style={{ width: '100%', height: 'auto' }} />
             </div>
           </div>
         </div>

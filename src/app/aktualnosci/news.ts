@@ -453,5 +453,19 @@ export const NEWS: NewsPost[] = [
     date: '2025-09-21',
     image: '/news/rajd2.jpg',
     desc: 'Lato oficjalnie pożegnane i na jesień przyszedł czas, dla nas to oczywiście nie koniec świata, bo jesiennymi i zimowymi terenami nie gardzimy, tymczasem na chwilę uciekamy, kalendarz i telefon w domu zostawiamy, co oczywiście nie oznacza że nie możecie do nas pisać, jak tylko z urlopu wrócimy to na wszelkie wiadomości odpowiemy. Do usłyszenia w czwartek!'
-  }
+  },
+  {
+    id: 63,
+    title: 'Teren 14 października',
+    date: '2025-10-07',
+    image: '/news/dzien-naucz.jpg',
+    desc: 'Kochani, kto chętny na jesienny terenik we wtorek 14.10 serdecznie zapraszamy, zbiórka w stajni o 10:00. Więcej info w wiadomości prywatnej - czas trwania terenu do uzgodnienia (1-2h), minimalna liczba chętnych 2 osoby, przy zróżnicowanych poziomach możliwość utworzenia 2 oddzielnych grup galop oraz stępo-kłus.'
+  },
+  {
+  id: 64,
+  title: 'Jesienno-zimowe tereny okolicznościowe',
+  date: '2025-10-24',
+  image: '/news/jesien_teren.jpg',
+  desc: 'Serdecznie zapraszamy na serie jesienno-zimowych terenów okolicznościowych, które odbędą się jeszcze w tym roku kalendarzowym!!! Wszystkie szczegóły w wiadomości prywatnej, ilość miejsc ograniczona, serdecznie zapraszamy do zapisów.'
+  },
 ]

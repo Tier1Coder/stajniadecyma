@@ -12,7 +12,6 @@ export const metadata = {
   description: siteDescription,
   robots: 'index, follow',
   icons: { icon: '/favicon.ico' },
-  // alternates.canonical removed to allow per-page canonical URLs
   keywords:
   'stajnia decyma, stajnia decyma Sulechów, stajnia decyma Darnawa, jazda konna, nauka jazdy konnej, kurs jazdy konnej, szkółka jeździecka, instruktor jazdy konnej, Sulechów, Świebodzin, Darnawa, Lubuskie, jazdy konne, przejażdżki konne, rajdy konne, karnety, półkolonie jeździeckie, obozy jeździeckie, zajęcia jeździeckie dla dzieci, imprezy okolicznościowe, przejażdżki w terenie, konie, jazdy, nauka jazdy, nauka jazdy konnej, nauka jazdy konnej dla dzieci, nauka jazdy konnej dla dorosłych, szkółka jeździecka dla dzieci, szkółka jeździecka dla dorosłych, instruktor jazdy konnej Sulechów, instruktor jazdy konnej Świebodzin, instruktor jazdy konnej Darnawa, atrakcje Sulechów, atrakcje Świebodzin, Sulechów, Świebodzin, Darnawa, Lubuskie, jazda konna Sulechów, jazda konna Świebodzin, jazda konna Darnawa, nauka jazdy konnej Sulechów, nauka jazdy konnej Świebodzin, nauka jazdy konnej Darnawa, szkółka jeździecka Sulechów, szkółka jeździecka Świebodzin, szkółka jeździecka Darnawa',
 };
@@ -44,7 +43,6 @@ function buildJsonLd() {
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  // Google Analytics: set NEXT_PUBLIC_GA_ID in env to enable (e.g. G-XXXXXXXXXX)
   const gaId = process.env.NEXT_PUBLIC_GA_ID || '';
 
   return (
@@ -74,14 +72,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* JSON-LD structured data */}
         <script
           type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: buildJsonLd() }}
         />
 
         {/* LocalBusiness JSON-LD for local SEO (static) */}
         <script
           type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
@@ -109,7 +105,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* Website JSON-LD (basic) */}
         <script
           type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
@@ -122,15 +117,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 'query-input': 'required name=search_term_string',
               },
             }),
-          }}
-        />
+      }}
+    />
 
         {/* Google Analytics (optional). Provide NEXT_PUBLIC_GA_ID in env to enable. */}
         {gaId ? (
           <>
             <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} />
             <script
-              // eslint-disable-next-line react/no-danger
               dangerouslySetInnerHTML={{
                 __html: `
                 window.dataLayer = window.dataLayer || [];

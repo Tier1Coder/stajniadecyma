@@ -5,7 +5,7 @@ import { NEWS } from './news';
 
 export const metadata = {
   title: 'Aktualności | Stajnia Decyma',
-  description: 'Aktualności ze Stajni Decyma — najnowsze wydarzenia, turnusy, rajdy i informacje o zajęciach.',
+  description: 'Aktualności ze Stajni Decyma - najnowsze wydarzenia, turnusy, rajdy i informacje o zajęciach.',
   alternates: { canonical: 'https://stajniadecyma.pl/aktualnosci' },
 };
 

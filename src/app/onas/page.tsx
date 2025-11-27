@@ -15,13 +15,13 @@ export default function ONasPage() {
             Nazwa stajni pochodzi od wyjątkowej klaczy - Decymy, która była pierwszym koniem w naszej szkółce i w pewnym sensie zapoczątkowała to miejsce.
           </p>
           <p>
-            Na co dzień prowadzę zajęcia z jazdy konnej – zarówno po polsku, jak i po angielsku , dlatego z przyjemnością goszczę także osoby z zagranicy. Robert dba o zaplecze techniczne i organizacyjne, dzięki czemu mogę skupić się na pracy z końmi i jeźdźcami.
+            Na co dzień prowadzę zajęcia z jazdy konnej - zarówno po polsku, jak i po angielsku , dlatego z przyjemnością goszczę także osoby z zagranicy. Robert dba o zaplecze techniczne i organizacyjne, dzięki czemu mogę skupić się na pracy z końmi i jeźdźcami.
           </p>
           <p>
-            Moim celem jest stworzenie przestrzeni, w której każdy – bez względu na wiek czy doświadczenie – poczuje radość z obcowania z końmi, nauczy się czegoś nowego i spędzi czas w rodzinnej, przyjaznej atmosferze.
+            Moim celem jest stworzenie przestrzeni, w której każdy - bez względu na wiek czy doświadczenie - poczuje radość z obcowania z końmi, nauczy się czegoś nowego i spędzi czas w rodzinnej, przyjaznej atmosferze.
           </p>
           <p>
-            W naszej stajni opiekujemy się dziesięcioma pięknymi końmi, które są nie tylko naszymi podopiecznymi, ale przede wszystkim przyjaciółmi i nauczycielami. Każdy z nich ma swój wyjątkowy charakter – od spokojnych i cierpliwych, idealnych dla osób rozpoczynających przygodę z jeździectwem, po bardziej energiczne, które doskonale sprawdzają się podczas jazd w terenie. Z troską dbamy o ich dobrostan, codzienną pielęgnację i odpowiednie warunki, dzięki czemu są zdrowe, zrównoważone i chętnie współpracują z jeźdźcami.
+            W naszej stajni opiekujemy się dziesięcioma pięknymi końmi, które są nie tylko naszymi podopiecznymi, ale przede wszystkim przyjaciółmi i nauczycielami. Każdy z nich ma swój wyjątkowy charakter - od spokojnych i cierpliwych, idealnych dla osób rozpoczynających przygodę z jeździectwem, po bardziej energiczne, które doskonale sprawdzają się podczas jazd w terenie. Z troską dbamy o ich dobrostan, codzienną pielęgnację i odpowiednie warunki, dzięki czemu są zdrowe, zrównoważone i chętnie współpracują z jeźdźcami.
           </p>
 
           <figure className="onas-image">
