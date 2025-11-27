@@ -1,21 +1,26 @@
-export const metadata = { title: 'Kontakt | Stajnia Decyma' };
+export const metadata = {
+  title: 'Kontakt | Stajnia Decyma',
+  description: 'Kontakt do Stajni Decyma - Darnawa. Telefon, e-mail i mapa dojazdu. Obsługujemy Sulechów, Świebodzin i okolice.',
+  keywords: ['kontakt stajnia decyma', 'stajnia darnawa', 'jazda konna kontakt'],
+};
 
 export default function KontaktPage() {
   return (
     <div className="page-bg">
       <section className="card card--text">
         <div className="wrap">
-          <h1>Kontakt</h1>
+          <h1>Kontakt - Stajnia Decyma (Darnawa, Lubuskie)</h1>
           <p>Masz pytania lub chcesz umówić jazdę? Skontaktuj się z nami.</p>
 
           <div className="contact-grid">
             <div>
               <h2>Dane kontaktowe</h2>
               <ul className="contact-list">
-                <li><strong>Telefon:</strong> <a href="tel:+48795759410">+48 795 759 410</a></li>
+                <li><strong>Telefon:</strong> <a href="tel:+48572069752">+48 572 069 752</a></li>
                 <li><strong>E-mail:</strong> <a href="mailto:stajniadecyma@icloud.com">stajniadecyma@icloud.com</a></li>
-                <li><strong>Adres:</strong> Stajnia Decyma, 66-235 Darnawa 28</li>
-                <li><strong>Godziny:</strong> pn–pt 9:00–19:00, sob–niedz 10:00–17:00</li>
+                <li><strong>Adres:</strong> Darnawa 28, 66-213 Skąpe</li>
+                <li><strong>Okolica:</strong> Sulechów, Świebodzin (woj. lubuskie)</li>
+                <li><strong>Godziny:</strong> wt-pt 9:00-19:00, sob-niedz 9:00-17:00</li>
                 <li>
                   <strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=100093287093369" target="_blank" rel="noopener noreferrer">Stajnia Decyma na Facebooku</a>
                 </li>

@@ -17,7 +17,7 @@ export default function RegulaminPage() {
             </li>
             <li>
               Jazdę można odwołać najpóźniej <strong>dzień przed</strong> ustalonym terminem
-              <strong> do godziny 20:00</strong> – w przeciwnym razie lekcja przepada.
+              <strong> do godziny 20:00</strong> - w przeciwnym razie lekcja przepada.
             </li>
             <li>
               Karnet na <strong>8 treningów/terenów dla 2 osób</strong> może zostać wykorzystany przez dwie osoby
@@ -28,7 +28,7 @@ export default function RegulaminPage() {
               w danym tygodniu, druga osoba może wybrać jedną z opcji:
               <ul>
                 <li>odbyć trening/teren indywidualny za dopłatą różnicy według cennika,</li>
-                <li>odbyć trening z inną osobą – o ile istnieje taka możliwość,</li>
+                <li>odbyć trening z inną osobą - o ile istnieje taka możliwość,</li>
                 <li>
                   przedłużyć karnet o kolejny termin (jeśli poinformuje o tym najpóźniej
                   do godziny <strong>20:00 dnia poprzedniego</strong>).

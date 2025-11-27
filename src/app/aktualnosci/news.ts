@@ -423,7 +423,7 @@ export const NEWS: NewsPost[] = [
    </ul>
    <p> Soboty będą dniami w których głównie będą odbywać się treningi 2 osobowe dla karnetowiczów oraz stałych klientów którzy przychodzą na jazdy regularnie.</p>
    <p> Pozostałe osoby, które nie mają możliwości ustalenia stałego terminu zapraszamy w pozostałe dni tygodnia - obowiązuje zasada "kto pierwszy ten lepszy".</p>
-   <p> Zapisy prosimy dokonywać poprzez SMS, whatsapp lub messenger, nie zawsze jesteśmy pod telefonem a na wiadomości napewno odpiszemy. </p>
+   <p> Zapisy prosimy dokonywać poprzez SMS, whatsapp lub messenger, nie zawsze jesteśmy pod telefonem, a na wiadomości na pewno odpiszemy. </p>
    `
   },
   {
@@ -446,5 +446,26 @@ export const NEWS: NewsPost[] = [
     date: '2025-09-01',
     image: '/news/zawody-skok.jpg',
     desc: 'A tak bawiliśmy się wczoraj na naszych pierwszych zawodach skokowych. Dziękujemy za tak liczne przybycie, widowisko pełne wrażeń i emocji!'
-  }
+  },
+  {
+    id: 62,
+    title: 'Rajd na zakończenie lata',
+    date: '2025-09-21',
+    image: '/news/rajd2.jpg',
+    desc: 'Lato oficjalnie pożegnane i na jesień przyszedł czas, dla nas to oczywiście nie koniec świata, bo jesiennymi i zimowymi terenami nie gardzimy, tymczasem na chwilę uciekamy, kalendarz i telefon w domu zostawiamy, co oczywiście nie oznacza że nie możecie do nas pisać, jak tylko z urlopu wrócimy to na wszelkie wiadomości odpowiemy. Do usłyszenia w czwartek!'
+  },
+  {
+    id: 63,
+    title: 'Teren 14 października',
+    date: '2025-10-07',
+    image: '/news/dzien-naucz.jpg',
+    desc: 'Kochani, kto chętny na jesienny terenik we wtorek 14.10 serdecznie zapraszamy, zbiórka w stajni o 10:00. Więcej info w wiadomości prywatnej - czas trwania terenu do uzgodnienia (1-2h), minimalna liczba chętnych 2 osoby, przy zróżnicowanych poziomach możliwość utworzenia 2 oddzielnych grup galop oraz stępo-kłus.'
+  },
+  {
+  id: 64,
+  title: 'Jesienno-zimowe tereny okolicznościowe',
+  date: '2025-10-24',
+  image: '/news/jesien_teren.jpg',
+  desc: 'Serdecznie zapraszamy na serie jesienno-zimowych terenów okolicznościowych, które odbędą się jeszcze w tym roku kalendarzowym!!! Wszystkie szczegóły w wiadomości prywatnej, ilość miejsc ograniczona, serdecznie zapraszamy do zapisów.'
+  },
 ]
