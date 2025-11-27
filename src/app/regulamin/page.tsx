@@ -24,7 +24,7 @@ export default function RegulaminPage() {
               jeżdżące raz w tygodniu, o ile są rodziną (np. rodzeństwo).
             </li>
             <li>
-              Jeśli jeden z karnetowiczów (dotyczy treningów/terenów 2‑osobowych) nie może odbyć jazdy
+              Jeśli jeden z karnetowiczów (dotyczy treningów/terenów 2-osobowych) nie może odbyć jazdy
               w danym tygodniu, druga osoba może wybrać jedną z opcji:
               <ul>
                 <li>odbyć trening/teren indywidualny za dopłatą różnicy według cennika,</li>

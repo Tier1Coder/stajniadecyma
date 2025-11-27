@@ -444,6 +444,71 @@ body{
   margin: 0 0 18px;
 }
 
+/* Price table styles */
+.muted {
+  color: #6b7280; /* slightly muted gray */
+  font-size: 0.97rem;
+  margin-bottom: 12px;
+}
+
+/* Underlined / emphasized text style used on ofert page */
+.underline-text {
+  text-decoration: underline;
+  text-decoration-color: var(--gold-strong);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.table-wrap {
+  margin: 14px 0 22px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--surface);
+  min-width: 640px; /* allow horizontal scroll on small screens */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+  border: 1px solid var(--line);
+}
+.price-table thead th {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,250,250,0.98));
+  color: var(--gold);
+  font-weight: 700;
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+.price-table tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px dashed var(--line);
+  color: var(--text);
+  vertical-align: middle;
+}
+.price-table tbody tr:nth-child(even) td {
+  background: #fbfbfb;
+}
+.price-table tbody tr:hover td {
+  background: #fffef8;
+}
+.price-table td:last-child,
+.price-table th:last-child { text-align: right; }
+
+@media (max-width: 700px) {
+  .price-table { min-width: 520px; }
+  .price-table thead th, .price-table tbody td { padding: 10px 12px; font-size: 14px; }
+  .muted { font-size: 0.92rem; }
+}
+
+
 .onas-image{
   margin-top: 24px;
   border-radius: 16px;
