@@ -13,7 +13,7 @@ export default function HomePage() {
       <section className="card card--logo">
         <div className="wrap">
           <div className="logo-box">
-            <Image src="/logo.png" alt="Stajnia Decyma" fill priority />
+            <Image src="/bialozlote.png" alt="Stajnia Decyma" fill priority />
           </div>
         </div>
       </section>
