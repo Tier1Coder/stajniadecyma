@@ -639,19 +639,20 @@ body{
   object-fit: cover;
 }
 .gallery__item figcaption {
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  padding: 8px 10px;
-  font-size: 15px;
-  color: #fff;
-  background: linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.55));
-  border-radius: 8px;
+  position: static;
+  padding: 14px 16px;
+  margin: 0;
+  font-size: 15.5px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--gold);
+  letter-spacing: 0.1px;
+  background: #fff;
+  border-top: 1px solid var(--line);
 }
 
 .gallery__item {
-  position: relative; /* for caption overlay */
+  position: relative; /* keep for potential future overlays */
 }
 
 @media (max-width: 1000px) {
@@ -661,10 +662,6 @@ body{
 @media (max-width: 640px) {
   .gallery__grid { grid-template-columns: 1fr; }
   .gallery__item img { aspect-ratio: 3 / 4; }
-}
-
-.gallery__item figcaption {
-  font-size: 15.5px;
 }
 
 .horse-media {

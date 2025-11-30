@@ -468,4 +468,11 @@ export const NEWS: NewsPost[] = [
   image: '/news/jesien_teren.jpg',
   desc: 'Serdecznie zapraszamy na serie jesienno-zimowych terenów okolicznościowych, które odbędą się jeszcze w tym roku kalendarzowym!!! Wszystkie szczegóły w wiadomości prywatnej, ilość miejsc ograniczona, serdecznie zapraszamy do zapisów.'
   },
+  {
+    id: 65,
+    title: 'Vouchery podarunkowe',
+    date: '2025-11-30',
+    image: '/news/voucher.jpg',
+    desc: 'Brak pomysłu na świąteczny prezent??? Mamy rozwiązanie! Oferujemy vouchery w kwocie od 50 do 500 zł na dowolne usługi do wykorzystania w ciągu 3 miesięcy od daty zakupu.'
+  }
 ]

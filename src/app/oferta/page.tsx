@@ -261,6 +261,11 @@ export default function OfertaPage() {
               </figure>
 
               <figure className="gallery__item">
+                <Image src="/oferta/voucher.jpg" alt="Vouchery podarunkowe" width={800} height={1000} className="gallery__img" />
+                <figcaption>Vouchery podarunkowe</figcaption>
+              </figure>
+
+              <figure className="gallery__item">
                 <Image src="/oferta/zawody.jpg" alt="Zawody jeździeckie" width={800} height={1000} className="gallery__img" />
                 <figcaption>Zawody jeździeckie</figcaption>
               </figure>
