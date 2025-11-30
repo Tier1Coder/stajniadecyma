@@ -20,7 +20,7 @@ export default function OfertaPage() {
 
           <h2>CENNIK</h2>
           <p>
-            Przedstawiony czas dotyczy samej jazdy konnej (czasu w siodle) i nie obejmuje przygotowania konia (czyszczenie, siodłanie). Podane ceny są za jedną osobę. 
+            Przedstawiony czas dotyczy samej jazdy konnej (czasu w siodle) i nie obejmuje przygotowania konia (czyszczenie, siodłanie). Podane ceny są za jedną osobę. Warunki korzystania z karnetów są opisane z zakładce Regulamin.
           </p>
 
           <h3>NAUKA / PODSTAWY</h3>
@@ -30,9 +30,9 @@ export default function OfertaPage() {
                 <tr>
                   <th>Rodzaj usługi</th>
                   <th>Czas</th>
-                  <th>jednorazowo</th>
-                  <th>karnet 4x</th>
-                  <th>karnet 8x</th>
+                  <th>Jednorazowo</th>
+                  <th>Karnet 4x</th>
+                  <th>Karnet 8x</th>
                 </tr>
               </thead>
               <tbody>
@@ -76,9 +76,9 @@ export default function OfertaPage() {
                 <tr>
                   <th>Rodzaj</th>
                   <th>Czas</th>
-                  <th>jednorazowo</th>
-                  <th>karnet 4x</th>
-                  <th>karnet 8x</th>
+                  <th>Jednorazowo</th>
+                  <th>Karnet 4x</th>
+                  <th>Karnet 8x</th>
                 </tr>
               </thead>
               <tbody>
@@ -148,7 +148,7 @@ export default function OfertaPage() {
               </tbody>
             </table>
           </div>
-          <p className="muted">Wyjazdy w teren są dostosowane do poziomu jeźdźców. Tereny są zarówno w kłusie jak i galopie, zależnie od poziomugrupy oraz od pogody.</p>
+          <p className="muted">Wyjazdy w teren są dostosowane do poziomu jeźdźców. Tereny są zarówno w kłusie, jak i w galopie, zależnie od poziomu grupy oraz od pogody.</p>
 
           <h3>OFERTY SPECJALNE</h3>
           <div className="table-wrap">
@@ -204,11 +204,11 @@ export default function OfertaPage() {
               </tbody>
             </table>
           </div>
-          <p className="muted">Oferty specjalne obejmują całodniowe i kilkudniowe programy (półkolonie, kolonie, rajdy). Szczegóły, terminy i transport ustalamy indywidualnie. Zaleznie od programu zapewniane są posiłki, dodatkowe atrakcje, nocleg. Zapewniona jest opieka instruktorska przez cały czas trwania programu. </p>
+          <p className="muted">Oferty specjalne obejmują całodniowe i kilkudniowe programy (półkolonie, kolonie, rajdy). Szczegóły, terminy i transport ustalamy indywidualnie. Zależnie od programu zapewniane są posiłki, dodatkowe atrakcje, nocleg. Zapewniona jest opieka instruktorska przez cały czas trwania programu. Półkolonie skierowane są do początkujących jeźdźców, natomiast kolonie są dla osób zaawansowanych. </p>
 
           <h2>Usługi dodatkowe</h2>
           <p>
-            Oprócz rwymienionych usług oferujemy również:
+            Oprócz wymienionych usług oferujemy również:
           </p>
           <ul>
             <li>sesje zdjęciowe z końmi</li>

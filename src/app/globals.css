@@ -484,7 +484,9 @@ body{
   color: var(--gold);
   font-weight: 700;
   padding: 12px 16px;
-  text-align: left;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
   border-bottom: 1px solid var(--line);
 }
 .price-table tbody td {
@@ -492,6 +494,8 @@ body{
   border-bottom: 1px dashed var(--line);
   color: var(--text);
   vertical-align: middle;
+  text-align: center;
+  white-space: nowrap;
 }
 .price-table tbody tr:nth-child(even) td {
   background: #fbfbfb;
@@ -499,8 +503,6 @@ body{
 .price-table tbody tr:hover td {
   background: #fffef8;
 }
-.price-table td:last-child,
-.price-table th:last-child { text-align: right; }
 
 @media (max-width: 700px) {
   .price-table { min-width: 520px; }

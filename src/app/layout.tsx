@@ -6,12 +6,26 @@ import { NEWS } from './aktualnosci/news';
 
 const siteDescription =
   'Stajnia Decyma - jazda konna, szkółka jeździecka w woj. lubuskim (Świebodzin / Sulechów). Nauka jazdy konnej, karnety, półkolonie i imprezy okolicznościowe.';
+const faviconPath = '/favicon.ico';
+const icon32Path = '/favicon-32x32.png';
+const icon16Path = '/favicon-16x16.png';
+const appleIconPath = '/apple-touch-icon.png';
+const shareImagePath = '/android-chrome-512x512.png';
+const shareImageUrl = `https://stajniadecyma.pl${shareImagePath}`;
 
 export const metadata = {
   title: 'Stajnia Decyma',
   description: siteDescription,
   robots: 'index, follow',
-  icons: { icon: '/favicon.ico' },
+  icons: {
+    icon: [
+      { url: faviconPath, sizes: '32x32' },
+      { url: icon32Path, type: 'image/png', sizes: '32x32' },
+      { url: icon16Path, type: 'image/png', sizes: '16x16' },
+    ],
+    apple: [{ url: appleIconPath, sizes: '180x180' }],
+    shortcut: faviconPath,
+  },
   keywords:
   'stajnia decyma, stajnia decyma Sulechów, stajnia decyma Darnawa, jazda konna, nauka jazdy konnej, kurs jazdy konnej, szkółka jeździecka, instruktor jazdy konnej, Sulechów, Świebodzin, Darnawa, Lubuskie, jazdy konne, przejażdżki konne, rajdy konne, karnety, półkolonie jeździeckie, obozy jeździeckie, zajęcia jeździeckie dla dzieci, imprezy okolicznościowe, przejażdżki w terenie, konie, jazdy, nauka jazdy, nauka jazdy konnej, nauka jazdy konnej dla dzieci, nauka jazdy konnej dla dorosłych, szkółka jeździecka dla dzieci, szkółka jeździecka dla dorosłych, instruktor jazdy konnej Sulechów, instruktor jazdy konnej Świebodzin, instruktor jazdy konnej Darnawa, atrakcje Sulechów, atrakcje Świebodzin, Sulechów, Świebodzin, Darnawa, Lubuskie, jazda konna Sulechów, jazda konna Świebodzin, jazda konna Darnawa, nauka jazdy konnej Sulechów, nauka jazdy konnej Świebodzin, nauka jazdy konnej Darnawa, szkółka jeździecka Sulechów, szkółka jeździecka Świebodzin, szkółka jeździecka Darnawa',
 };
@@ -25,7 +39,7 @@ function buildJsonLd() {
     name: 'Stajnia Decyma',
     url: 'https://stajniadecyma.pl/',
     description: siteDescription,
-    image: 'https://stajniadecyma.pl/logo.png',
+    image: shareImageUrl,
     sameAs: [],
   };
 
@@ -53,21 +67,25 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="keywords" content={metadata.keywords} />
     {/* Note: canonical and robots are set per-page via route metadata to avoid forcing
       every page to canonicalize to the homepage. Do not add global canonical/robots here. */}
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href={faviconPath} />
+        <link rel="icon" type="image/png" sizes="32x32" href={icon32Path} />
+        <link rel="icon" type="image/png" sizes="16x16" href={icon16Path} />
+        <link rel="apple-touch-icon" href={appleIconPath} sizes="180x180" />
+        <link rel="manifest" href="/site.webmanifest" />
         <meta property="og:title" content="Stajnia Decyma" />
         <meta property="og:description" content={siteDescription} />
   <meta property="og:locale" content="pl_PL" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://stajniadecyma.pl/" />
-        <meta property="og:image" content="/logo.png" />
+        <meta property="og:image" content={shareImageUrl} />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Stajnia Decyma" />
   <meta name="twitter:description" content={siteDescription} />
+        <meta name="twitter:image" content={shareImageUrl} />
   <link rel="alternate" href="https://stajniadecyma.pl/" hrefLang="pl" />
   <meta name="geo.region" content="PL-08" />
   <meta name="geo.placename" content="Darnawa" />
-        <meta itemProp="image" content="/logo.png" />
-        <meta name="twitter:image" content="/logo.png" />
+        <meta itemProp="image" content={shareImageUrl} />
 
         {/* JSON-LD structured data */}
         <script
@@ -83,7 +101,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               '@context': 'https://schema.org',
               '@type': 'LocalBusiness',
               name: 'Stajnia Decyma',
-              image: 'https://stajniadecyma.pl/logo.png',
+              image: shareImageUrl,
               '@id': 'https://stajniadecyma.pl',
               url: 'https://stajniadecyma.pl',
               telephone: '+48 795 759 410',
@@ -151,4 +169,3 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     </html>
   );
 }
-
