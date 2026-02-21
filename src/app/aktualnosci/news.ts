@@ -474,5 +474,41 @@ export const NEWS: NewsPost[] = [
     date: '2025-11-30',
     image: '/news/voucher.jpg',
     desc: 'Brak pomysłu na świąteczny prezent??? Mamy rozwiązanie! Oferujemy vouchery w kwocie od 50 do 500 zł na dowolne usługi do wykorzystania w ciągu 3 miesięcy od daty zakupu.'
+  },
+  {
+    id: 66,
+    title: 'Zimowe jednodniowe półkolonie jeździeckie',
+    date: '2026-01-03',
+    image: '/news/zimpolkol.jpg',
+    desc: 'Zapraszamy dzieci i młodzież (od 8 r.ż.) na zimowe jednodniowe półkolonie jeździeckie. Kameralne grupy, jazda konna, prace stajenne, karmienie koni i królików oraz ciepłe napoje z przekąskami.'
+  },
+  {
+    id: 67,
+    title: 'Zimowe ognisko po jeździe',
+    date: '2026-02-01',
+    image: '/news/ogniskozima.jpg',
+    desc: 'Po zimowych aktywnościach przyszedł czas na wspólne ognisko. Dziękujemy za świetną atmosferę i aktywnie spędzony dzień w stajni!'
+  },
+  {
+    id: 68,
+    title: 'Teren zimowy',
+    date: '2026-01-14',
+    image: '/news/615790671_775032115616351_6964648673041066379_n.jpg',
+    desc: 'Zima i śnieżne trasy nam niestraszne. Kolejny udany teren za nami!'
+  },
+  {
+    id: 69,
+    title: 'Letnia oferta',
+    date: '2026-01-31',
+    image: '/news/ofertaletnia',
+    desc: `
+    <p>Luty tuż za rogiem a wraz z nim nadszedł czas aby ogłosić naszą ofertę wakacyjną 🌞🐴🌻⛱️🕶️☀️😎🐎🌿🌳</p>
+    <ul>
+      <li>🐎 tygodniowe półkolonie jeździeckie od poniedziałku do piątku ..UWAGA.. z dodatkową opcją transportu dla osób z okolic Świebodzina i Sulechowa oraz okolicznych wiosek Darnawy</li>
+      <li>🐎 jednodniowe półkolonie również z opcją transportu</li>
+      <li>🐎 pojedyncze nocowanki w stajni z terenem, ogniskiem oraz treningiem (nocowanki będą odbywać się w tygodniach kiedy nie będzie tygodniowych półkolonii)</li>
+    </ul>
+    <p>Wszystkie szczegóły oraz wstępne zapisy w wiadomości prywatnej 🐴🐴🐴</p>
+    `
   }
 ]
