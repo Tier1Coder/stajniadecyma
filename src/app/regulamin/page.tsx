@@ -1,4 +1,9 @@
-export const metadata = { title: 'Regulamin | Stajnia Decyma' };
+export const metadata = {
+  title: 'Regulamin | Stajnia Decyma',
+  description:
+    'Regulamin Stajni Decyma: zasady korzystania z karnetów, odwoływania jazd i organizacji treningów.',
+  alternates: { canonical: '/regulamin' },
+};
 
 export default function RegulaminPage() {
   return (

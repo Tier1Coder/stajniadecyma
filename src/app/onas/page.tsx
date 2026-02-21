@@ -1,6 +1,11 @@
 import Image from 'next/image';
 
-export const metadata = { title: 'O nas | Stajnia Decyma' };
+export const metadata = {
+  title: 'O nas | Stajnia Decyma',
+  description:
+    'Poznaj Stajnię Decyma i nasz zespół. Kameralna stajnia w Darnawie oferująca naukę jazdy konnej dla dzieci i dorosłych.',
+  alternates: { canonical: '/onas' },
+};
 
 export default function ONasPage() {
   return (
@@ -25,12 +30,24 @@ export default function ONasPage() {
           </p>
 
           <figure className="onas-image">
-            <Image src="/agata2.jpg" alt="Agata - instruktorka" width={400} height={400} />
+            <Image
+              src="/agata2.jpg"
+              alt="Agata - instruktorka"
+              width={400}
+              height={400}
+              sizes="(max-width: 900px) 100vw, 400px"
+            />
             <figcaption>Agata - instruktorka i właścicielka</figcaption>
           </figure>
 
           <figure className="onas-image">
-            <Image src="/robert.jpg" alt="Robert - współprowadzący" width={400} height={400} />
+            <Image
+              src="/robert.jpg"
+              alt="Robert - współprowadzący"
+              width={400}
+              height={400}
+              sizes="(max-width: 900px) 100vw, 400px"
+            />
             <figcaption>Robert</figcaption>
           </figure>
         </div>

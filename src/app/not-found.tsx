@@ -25,7 +25,14 @@ export default function NotFound() {
             </div>
 
             <div className="hero__image">
-              <Image src="/logo.png" alt="Stajnia Decyma" width={800} height={400} style={{ width: '100%', height: 'auto' }} />
+              <Image
+                src="/bialozlote.png"
+                alt="Stajnia Decyma"
+                width={800}
+                height={400}
+                sizes="(max-width: 900px) 100vw, 800px"
+                style={{ width: '100%', height: 'auto' }}
+              />
             </div>
           </div>
         </div>

@@ -53,7 +53,13 @@ export default function NewsPostPage(props: any) {
           <h1>{post.title}</h1>
           <time className="news-date">{post.date}</time>
           <div style={{ margin: '1rem 0' }}>
-            <Image src={post.image} alt={post.title} width={800} height={600} />
+            <Image
+              src={post.image}
+              alt={post.title}
+              width={800}
+              height={600}
+              sizes="(max-width: 900px) 100vw, 800px"
+            />
           </div>
           <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.desc) }} />
         </div>

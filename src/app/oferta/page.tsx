@@ -2,6 +2,7 @@ export const metadata = {
   title: 'Oferta | Stajnia Decyma',
   description: 'Oferta Stajni Decyma: jazdy indywidualne, karnety, półkolonie, imprezy i usługi dodatkowe. Obsługujemy Sulechów, Świebodzin i okolice.',
   keywords: ['jazda konna sulechów', 'jazda konna świebodzin', 'oferta stajnia decyma', 'karnety jeździeckie'],
+  alternates: { canonical: '/oferta' },
 };
 
 import Image from 'next/image'
@@ -64,61 +65,61 @@ export default function OfertaPage() {
           <section className="gallery">
             <div className="gallery__grid">
               <figure className="gallery__item">
-                <Image src="/oferta/rajd.jpg" alt="Rajd konny" width={800} height={1000} className="gallery__img" />
+                <Image src="/oferta/rajd.jpg" alt="Rajd konny" width={800} height={1000} sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw" className="gallery__img" />
                 <figcaption>Rajd konny</figcaption>
               </figure>
 
               <figure className="gallery__item">
-                <Image src="/oferta/wycieczka.jpg" alt="Wycieczka szkolna" width={800} height={1000} className="gallery__img" />
+                <Image src="/oferta/wycieczka.jpg" alt="Wycieczka szkolna" width={800} height={1000} sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw" className="gallery__img" />
                 <figcaption>Wycieczka szkolna</figcaption>
               </figure>
 
               <figure className="gallery__item">
-                <Image src="/oferta/sesja.jpg" alt="Sesja zdjęciowa" width={800} height={1000} className="gallery__img" />
+                <Image src="/oferta/sesja.jpg" alt="Sesja zdjęciowa" width={800} height={1000} sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw" className="gallery__img" />
                 <figcaption>Sesja zdjęciowa</figcaption>
               </figure>
 
               <figure className="gallery__item">
-                <Image src="/oferta/ognisko.jpg" alt="Ognisko integracyjne" width={800} height={1000} className="gallery__img" />
+                <Image src="/oferta/ognisko.jpg" alt="Ognisko integracyjne" width={800} height={1000} sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw" className="gallery__img" />
                 <figcaption>Ognisko integracyjne</figcaption>
               </figure>
 
               <figure className="gallery__item">
-                <Image src="/oferta/kolonie.jpg" alt="Półkolonie" width={800} height={1000} className="gallery__img" />
+                <Image src="/oferta/kolonie.jpg" alt="Półkolonie" width={800} height={1000} sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw" className="gallery__img" />
                 <figcaption>Półkolonie</figcaption>
               </figure>
 
               <figure className="gallery__item">
-                <Image src="/oferta/karnety.jpg" alt="Karnety" width={800} height={1000} className="gallery__img" />
+                <Image src="/oferta/karnety.jpg" alt="Karnety" width={800} height={1000} sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw" className="gallery__img" />
                 <figcaption>Karnety</figcaption>
               </figure>
 
               <figure className="gallery__item">
-                <Image src="/oferta/zawody.jpg" alt="Zawody jeździeckie" width={800} height={1000} className="gallery__img" />
+                <Image src="/oferta/zawody.jpg" alt="Zawody jeździeckie" width={800} height={1000} sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw" className="gallery__img" />
                 <figcaption>Zawody jeździeckie</figcaption>
               </figure>
 
               <figure className="gallery__item">
-                <Image src="/oferta/dzieci.jpg" alt="Dzieci podczas zajęć" width={800} height={1000} className="gallery__img" />
+                <Image src="/oferta/dzieci.jpg" alt="Dzieci podczas zajęć" width={800} height={1000} sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw" className="gallery__img" />
                 <figcaption>Zajęcia dla dzieci</figcaption>
               </figure>
 
               <figure className="gallery__item">
-                <Image src="/oferta/ogniskonoc.jpg" alt="Ognisko nocą" width={800} height={1000} className="gallery__img" />
+                <Image src="/oferta/ogniskonoc.jpg" alt="Ognisko nocą" width={800} height={1000} sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw" className="gallery__img" />
                 <figcaption>Ognisko nocą</figcaption>
               </figure>
               <figure className="gallery__item">
-                <Image src="/oferta/zima.jpg" alt="Zimowe jazdy" width={800} height={1000} className="gallery__img" />
+                <Image src="/oferta/zima.jpg" alt="Zimowe jazdy" width={800} height={1000} sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw" className="gallery__img" />
                 <figcaption>Zimowe jazdy</figcaption>
               </figure>
 
               <figure className="gallery__item">
-                <Image src="/oferta/zimowekolonie.jpg" alt="Zimowe kolonie" width={800} height={1000} className="gallery__img" />
+                <Image src="/oferta/zimowekolonie.jpg" alt="Zimowe kolonie" width={800} height={1000} sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw" className="gallery__img" />
                 <figcaption>Zimowe półkolonie</figcaption>
               </figure>
 
               <figure className="gallery__item">
-                <Image src="/oferta/zdjecia.jpg" alt="Sesja z okazji I Komunii" width={800} height={1000} className="gallery__img" />
+                <Image src="/oferta/zdjecia.jpg" alt="Sesja z okazji I Komunii" width={800} height={1000} sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw" className="gallery__img" />
                 <figcaption>Sesja z okazji I Komunii</figcaption>
               </figure>
             </div>

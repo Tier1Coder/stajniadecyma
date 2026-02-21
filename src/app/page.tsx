@@ -5,6 +5,7 @@ export const metadata = {
   description:
     'Stajnia Decyma - jazdy konne, nauka jeździectwa, półkolonie i rajdy. Obsługujemy Sulechów, Świebodzin i okolice w woj. lubuskim.',
   keywords: ['stajnia decyma', 'jazda konna sulechów', 'jazda konna świebodzin', 'stajnia darnawa', 'stajnia lubuskie'],
+  alternates: { canonical: '/' },
 };
 
 export default function HomePage() {
@@ -13,7 +14,13 @@ export default function HomePage() {
       <section className="card card--logo">
         <div className="wrap">
           <div className="logo-box">
-            <Image src="/bialozlote.png" alt="Stajnia Decyma" fill priority />
+            <Image
+              src="/bialozlote.png"
+              alt="Stajnia Decyma"
+              fill
+              priority
+              sizes="(max-width: 900px) 100vw, 1040px"
+            />
           </div>
         </div>
       </section>
@@ -36,6 +43,7 @@ export default function HomePage() {
                 height={1067}
                 className="hero-img"
                 priority
+                sizes="(max-width: 900px) 100vw, 45vw"
               />
             </div>
           </div>

@@ -6,7 +6,7 @@ import { NEWS } from './news';
 export const metadata = {
   title: 'Aktualności | Stajnia Decyma',
   description: 'Aktualności ze Stajni Decyma - najnowsze wydarzenia, turnusy, rajdy i informacje o zajęciach.',
-  alternates: { canonical: 'https://stajniadecyma.pl/aktualnosci' },
+  alternates: { canonical: '/aktualnosci' },
 };
 
 export default function AktualnosciPage() {
@@ -21,7 +21,13 @@ export default function AktualnosciPage() {
             {posts.map(post => (
               <Link key={post.id} href={`/aktualnosci/${post.id}`} className="news-card">
                 <div className="news-image">
-                  <Image src={post.image} alt={post.title} width={400} height={300} />
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    width={400}
+                    height={300}
+                    sizes="(max-width: 700px) 100vw, 900px"
+                  />
                 </div>
                 <div className="news-body">
                   <h2 className="news-title">{post.title}</h2>

@@ -1,9 +1,12 @@
 import './globals.css';
 import Link from 'next/link';
+import Script from 'next/script';
 import Topbar from './Topbar';
 import type { ReactNode } from 'react';
+import type { Metadata } from 'next';
 import { NEWS } from './aktualnosci/news';
 
+const siteUrl = 'https://stajniadecyma.pl';
 const siteDescription =
   'Stajnia Decyma - jazda konna, szkółka jeździecka w woj. lubuskim (Świebodzin / Sulechów). Nauka jazdy konnej, karnety, półkolonie i imprezy okolicznościowe.';
 const faviconPath = '/favicon.ico';
@@ -11,12 +14,17 @@ const icon32Path = '/favicon-32x32.png';
 const icon16Path = '/favicon-16x16.png';
 const appleIconPath = '/apple-touch-icon.png';
 const shareImagePath = '/android-chrome-512x512.png';
-const shareImageUrl = `https://stajniadecyma.pl${shareImagePath}`;
+const shareImageUrl = `${siteUrl}${shareImagePath}`;
+const siteKeywords =
+  'stajnia decyma, stajnia decyma Sulechów, stajnia decyma Darnawa, jazda konna, nauka jazdy konnej, kurs jazdy konnej, szkółka jeździecka, instruktor jazdy konnej, Sulechów, Świebodzin, Darnawa, Lubuskie, jazdy konne, przejażdżki konne, rajdy konne, karnety, półkolonie jeździeckie, obozy jeździeckie, zajęcia jeździeckie dla dzieci, imprezy okolicznościowe, przejażdżki w terenie, konie, jazdy, nauka jazdy, nauka jazdy konnej, nauka jazdy konnej dla dzieci, nauka jazdy konnej dla dorosłych, szkółka jeździecka dla dzieci, szkółka jeździecka dla dorosłych, instruktor jazdy konnej Sulechów, instruktor jazdy konnej Świebodzin, instruktor jazdy konnej Darnawa, atrakcje Sulechów, atrakcje Świebodzin, Sulechów, Świebodzin, Darnawa, Lubuskie, jazda konna Sulechów, jazda konna Świebodzin, jazda konna Darnawa, nauka jazdy konnej Sulechów, nauka jazdy konnej Świebodzin, nauka jazdy konnej Darnawa, szkółka jeździecka Sulechów, szkółka jeździecka Świebodzin, szkółka jeździecka Darnawa';
 
-export const metadata = {
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: 'Stajnia Decyma',
   description: siteDescription,
-  robots: 'index, follow',
+  keywords: siteKeywords,
+  alternates: { canonical: '/' },
+  robots: { index: true, follow: true },
   icons: {
     icon: [
       { url: faviconPath, sizes: '32x32' },
@@ -26,8 +34,24 @@ export const metadata = {
     apple: [{ url: appleIconPath, sizes: '180x180' }],
     shortcut: faviconPath,
   },
-  keywords:
-  'stajnia decyma, stajnia decyma Sulechów, stajnia decyma Darnawa, jazda konna, nauka jazdy konnej, kurs jazdy konnej, szkółka jeździecka, instruktor jazdy konnej, Sulechów, Świebodzin, Darnawa, Lubuskie, jazdy konne, przejażdżki konne, rajdy konne, karnety, półkolonie jeździeckie, obozy jeździeckie, zajęcia jeździeckie dla dzieci, imprezy okolicznościowe, przejażdżki w terenie, konie, jazdy, nauka jazdy, nauka jazdy konnej, nauka jazdy konnej dla dzieci, nauka jazdy konnej dla dorosłych, szkółka jeździecka dla dzieci, szkółka jeździecka dla dorosłych, instruktor jazdy konnej Sulechów, instruktor jazdy konnej Świebodzin, instruktor jazdy konnej Darnawa, atrakcje Sulechów, atrakcje Świebodzin, Sulechów, Świebodzin, Darnawa, Lubuskie, jazda konna Sulechów, jazda konna Świebodzin, jazda konna Darnawa, nauka jazdy konnej Sulechów, nauka jazdy konnej Świebodzin, nauka jazdy konnej Darnawa, szkółka jeździecka Sulechów, szkółka jeździecka Świebodzin, szkółka jeździecka Darnawa',
+  openGraph: {
+    type: 'website',
+    locale: 'pl_PL',
+    url: '/',
+    title: 'Stajnia Decyma',
+    description: siteDescription,
+    images: [{ url: shareImagePath }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Stajnia Decyma',
+    description: siteDescription,
+    images: [shareImagePath],
+  },
+  other: {
+    'geo.region': 'PL-08',
+    'geo.placename': 'Darnawa',
+  },
 };
 
 function buildJsonLd() {
@@ -61,39 +85,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
   return (
     <html lang="pl">
-      <head>
-        <title>Stajnia Decyma</title>
-  <meta name="description" content={siteDescription} />
-        <meta name="keywords" content={metadata.keywords} />
-    {/* Note: canonical and robots are set per-page via route metadata to avoid forcing
-      every page to canonicalize to the homepage. Do not add global canonical/robots here. */}
-        <link rel="icon" type="image/x-icon" href={faviconPath} />
-        <link rel="icon" type="image/png" sizes="32x32" href={icon32Path} />
-        <link rel="icon" type="image/png" sizes="16x16" href={icon16Path} />
-        <link rel="apple-touch-icon" href={appleIconPath} sizes="180x180" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta property="og:title" content="Stajnia Decyma" />
-        <meta property="og:description" content={siteDescription} />
-  <meta property="og:locale" content="pl_PL" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://stajniadecyma.pl/" />
-        <meta property="og:image" content={shareImageUrl} />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Stajnia Decyma" />
-  <meta name="twitter:description" content={siteDescription} />
-        <meta name="twitter:image" content={shareImageUrl} />
-  <link rel="alternate" href="https://stajniadecyma.pl/" hrefLang="pl" />
-  <meta name="geo.region" content="PL-08" />
-  <meta name="geo.placename" content="Darnawa" />
-        <meta itemProp="image" content={shareImageUrl} />
-
-        {/* JSON-LD structured data */}
+      <body className="footer-bg">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: buildJsonLd() }}
         />
-
-        {/* LocalBusiness JSON-LD for local SEO (static) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -102,8 +98,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               '@type': 'LocalBusiness',
               name: 'Stajnia Decyma',
               image: shareImageUrl,
-              '@id': 'https://stajniadecyma.pl',
-              url: 'https://stajniadecyma.pl',
+              '@id': siteUrl,
+              url: siteUrl,
               telephone: '+48 572 069 752',
               email: 'stajniadecyma@icloud.com',
               address: {
@@ -119,8 +115,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             }),
           }}
         />
-
-        {/* Website JSON-LD (basic) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -128,34 +122,23 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               '@context': 'https://schema.org',
               '@type': 'WebSite',
               name: 'Stajnia Decyma',
-              url: 'https://stajniadecyma.pl/',
-              potentialAction: {
-                '@type': 'SearchAction',
-                target: 'https://stajniadecyma.pl/?s={search_term_string}',
-                'query-input': 'required name=search_term_string',
-              },
+              url: `${siteUrl}/`,
             }),
-      }}
-    />
-
-        {/* Google Analytics (optional). Provide NEXT_PUBLIC_GA_ID in env to enable. */}
+          }}
+        />
         {gaId ? (
           <>
-            <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
+            <Script id="ga-config" strategy="afterInteractive">
+              {`
                 window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);} 
+                function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 gtag('config', '${gaId}');
-              `,
-              }}
-            />
+              `}
+            </Script>
           </>
         ) : null}
-      </head>
-      <body className="footer-bg">
         <Topbar />
         <main>{children}</main>
         <footer className="footer-cta">

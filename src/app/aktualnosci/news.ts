@@ -500,7 +500,7 @@ export const NEWS: NewsPost[] = [
     id: 69,
     title: 'Letnia oferta',
     date: '2026-01-31',
-    image: '/news/ofertaletnia',
+    image: '/news/ofertaletnia.jpg',
     desc: `
     <p>Luty tuż za rogiem a wraz z nim nadszedł czas aby ogłosić naszą ofertę wakacyjną 🌞🐴🌻⛱️🕶️☀️😎🐎🌿🌳</p>
     <ul>
