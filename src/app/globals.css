@@ -169,7 +169,8 @@ body{
 .mobile-menu a:last-child {
   border-bottom: none;
 }
-.mobile-menu a:hover {
+.mobile-menu a:hover,
+.mobile-menu a:focus-visible {
   color: var(--gold-strong);
   background: #f7f7f7;
 }

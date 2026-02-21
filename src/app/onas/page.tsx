@@ -1,9 +1,9 @@
 import Image from 'next/image';
 
 export const metadata = {
-  title: 'O nas | Stajnia Decyma',
+  title: 'O nas - szkółka jeździecka Darnawa | Stajnia Decyma',
   description:
-    'Poznaj Stajnię Decyma i nasz zespół. Kameralna stajnia w Darnawie oferująca naukę jazdy konnej dla dzieci i dorosłych.',
+    'Poznaj Stajnię Decyma i nasz zespół. Kameralna szkółka jeździecka w Darnawie dla dzieci i dorosłych z okolic Sulechowa i Świebodzina.',
   alternates: { canonical: '/onas' },
 };
 

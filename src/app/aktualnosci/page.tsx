@@ -1,11 +1,10 @@
 import DOMPurify from 'isomorphic-dompurify';
-import Image from 'next/image';
-import Link from 'next/link';
 import { NEWS } from './news';
+import SmartImage from '../../components/SmartImage';
 
 export const metadata = {
-  title: 'Aktualności | Stajnia Decyma',
-  description: 'Aktualności ze Stajni Decyma - najnowsze wydarzenia, turnusy, rajdy i informacje o zajęciach.',
+  title: 'Aktualności stajni | Stajnia Decyma Darnawa',
+  description: 'Najnowsze aktualności Stajni Decyma: wydarzenia, turnusy, rajdy i informacje o zajęciach w Darnawie koło Sulechowa i Świebodzina.',
   alternates: { canonical: '/aktualnosci' },
 };
 
@@ -19,9 +18,9 @@ export default function AktualnosciPage() {
           <h1>Aktualności i wydarzenia w Stajni Decyma</h1>
           <div className="news-grid">
             {posts.map(post => (
-              <Link key={post.id} href={`/aktualnosci/${post.id}`} className="news-card">
+              <a key={post.id} href={`/aktualnosci/${post.id}`} className="news-card">
                 <div className="news-image">
-                  <Image
+                  <SmartImage
                     src={post.image}
                     alt={post.title}
                     width={400}
@@ -37,7 +36,7 @@ export default function AktualnosciPage() {
                     dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.desc) }}
                   />
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>

@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Oferta | Stajnia Decyma',
-  description: 'Oferta Stajni Decyma: jazdy indywidualne, karnety, półkolonie, imprezy i usługi dodatkowe. Obsługujemy Sulechów, Świebodzin i okolice.',
+  title: 'Oferta jazdy konnej | Stajnia Decyma Darnawa',
+  description: 'Cennik i oferta Stajni Decyma: lekcje jazdy konnej, karnety, półkolonie i rajdy. Darnawa, okolice Sulechowa i Świebodzina.',
   keywords: ['jazda konna sulechów', 'jazda konna świebodzin', 'oferta stajnia decyma', 'karnety jeździeckie'],
   alternates: { canonical: '/oferta' },
 };

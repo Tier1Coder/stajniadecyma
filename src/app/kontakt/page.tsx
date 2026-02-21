@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Kontakt | Stajnia Decyma',
-  description: 'Kontakt do Stajni Decyma - Darnawa. Telefon, e-mail i mapa dojazdu. Obsługujemy Sulechów, Świebodzin i okolice.',
+  title: 'Kontakt - Stajnia Decyma Darnawa',
+  description: 'Skontaktuj się ze Stajnią Decyma w Darnawie: telefon, e-mail i mapa dojazdu. Obsługujemy Sulechów, Świebodzin i okolice.',
   keywords: ['kontakt stajnia decyma', 'stajnia darnawa', 'jazda konna kontakt'],
   alternates: { canonical: '/kontakt' },
 };

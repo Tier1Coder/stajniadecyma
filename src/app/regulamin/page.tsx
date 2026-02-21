@@ -1,7 +1,7 @@
 export const metadata = {
-  title: 'Regulamin | Stajnia Decyma',
+  title: 'Regulamin jazd konnych | Stajnia Decyma',
   description:
-    'Regulamin Stajni Decyma: zasady korzystania z karnetów, odwoływania jazd i organizacji treningów.',
+    'Regulamin Stajni Decyma: zasady karnetów, odwoływania jazd i organizacji treningów w Darnawie (lubuskie).',
   alternates: { canonical: '/regulamin' },
 };
 

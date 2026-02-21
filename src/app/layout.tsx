@@ -1,14 +1,14 @@
 import './globals.css';
-import Link from 'next/link';
 import Script from 'next/script';
 import Topbar from './Topbar';
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { NEWS } from './aktualnosci/news';
+import { toWebpSrc } from '../../lib/image';
 
 const siteUrl = 'https://stajniadecyma.pl';
 const siteDescription =
-  'Stajnia Decyma - jazda konna, szkółka jeździecka w woj. lubuskim (Świebodzin / Sulechów). Nauka jazdy konnej, karnety, półkolonie i imprezy okolicznościowe.';
+  'Stajnia Decyma w Darnawie (lubuskie): nauka jazdy konnej, tereny i półkolonie. Blisko Sulechowa i Świebodzina.';
 const faviconPath = '/favicon.ico';
 const icon32Path = '/favicon-32x32.png';
 const icon16Path = '/favicon-16x16.png';
@@ -20,7 +20,7 @@ const siteKeywords =
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'Stajnia Decyma',
+  title: 'Stajnia Decyma | Darnawa, lubuskie',
   description: siteDescription,
   keywords: siteKeywords,
   alternates: { canonical: '/' },
@@ -72,7 +72,7 @@ function buildJsonLd() {
       '@type': 'BlogPosting',
       headline: latest.title,
       datePublished: latest.date,
-      image: `https://stajniadecyma.pl${latest.image}`,
+      image: `https://stajniadecyma.pl${toWebpSrc(latest.image)}`,
       url: 'https://stajniadecyma.pl/aktualnosci',
     };
   }
@@ -143,9 +143,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <main>{children}</main>
         <footer className="footer-cta">
           <div className="wrap center">
-            <Link href="/kontakt" className="btn-primary">
+            <a href="/kontakt" className="btn-primary">
               Skontaktuj się z nami
-            </Link>
+            </a>
           </div>
         </footer>
       </body>

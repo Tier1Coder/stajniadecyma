@@ -1,9 +1,9 @@
 import HorsesClient from './HorsesClient';
 
 export const metadata = {
-  title: 'Nasze konie | Stajnia Decyma',
+  title: 'Nasze konie | Stajnia Decyma Darnawa',
   description:
-    'Poznaj konie Stajni Decyma. Każdy koń ma inny charakter i predyspozycje, dzięki czemu dobieramy jazdy do poziomu jeźdźca.',
+    'Poznaj konie Stajni Decyma w Darnawie. Sprawdź ich charakter i dobór do poziomu jeźdźca.',
   alternates: { canonical: '/konie' },
 };
 

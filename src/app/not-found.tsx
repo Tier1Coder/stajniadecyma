@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata = {
@@ -17,10 +16,10 @@ export default function NotFound() {
               <h1>404 — Strona nie została znaleziona</h1>
               <p>
                 Przykro nam, ale strona, której szukasz, nie istnieje lub została przeniesiona.
-                Możesz wrócić na <Link href="/">stronę główną</Link> lub skontaktować się z nami.
+                Możesz wrócić na <a href="/">stronę główną</a> lub skontaktować się z nami.
               </p>
               <p>
-                <Link href="/kontakt" className="btn-primary">Kontakt</Link>
+                <a href="/kontakt" className="btn-primary">Kontakt</a>
               </p>
             </div>
 

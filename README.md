@@ -154,7 +154,15 @@ pnpm prisma:seed     # ts-node prisma/seed.ts (or your seed runner)
 
 # Tests
 pnpm test:e2e        # Playwright tests
+
+# Images
+pnpm webp:generate   # Generate/refresh .webp files for images in public/
 ```
+
+### Automatic WebP generation
+- `predev` and `prebuild` run WebP generation automatically.
+- A local git `pre-commit` hook generates `.webp` for staged `public/**/*.jpg|jpeg|png` files and stages the new `.webp`.
+- Hook path is configured automatically on install (`core.hooksPath=.githooks`).
 
 ---
 
