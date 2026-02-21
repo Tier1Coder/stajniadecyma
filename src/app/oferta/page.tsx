@@ -18,197 +18,28 @@ export default function OfertaPage() {
             Sulechowa, Świebodzina i okolic woj. lubuskiego.
           </p>
 
-          <h2>CENNIK</h2>
-          <p>
-            Przedstawiony czas dotyczy samej jazdy konnej (czasu w siodle) i nie obejmuje przygotowania konia (czyszczenie, siodłanie). Podane ceny są za jedną osobę. Warunki korzystania z karnetów są opisane z zakładce Regulamin.
-          </p>
+          <h2>Cennik zajęć</h2>
+          <ul>
+            <li>Oprowadzanka na kucyku - <strong>35 zł / 15 min</strong></li>
+            <li>Lonża od podstaw - <strong>75 zł / 30 min</strong></li>
+            <li>Trening/teren indywidualny - <strong>110 zł / h</strong></li>
+            <li>Trening/teren dla 2 osób - <strong>80 zł / h za osobę</strong></li>
+            <li>Trening/teren dla 3 osób - <strong>70 zł / h (plac, max 4 osoby)</strong></li>
+            <li>Teren powyżej 1 h - <strong>1 zł / min</strong></li>
+          </ul>
 
-          <h3>NAUKA / PODSTAWY</h3>
-          <div className="table-wrap">
-            <table className="price-table">
-              <thead>
-                <tr>
-                  <th>Rodzaj usługi</th>
-                  <th>Czas</th>
-                  <th>Jednorazowo</th>
-                  <th>Karnet 4x</th>
-                  <th>Karnet 8x</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Nauka czyszczenia i siodłania</td>
-                  <td>20 min</td>
-                  <td>20 zł</td>
-                  <td>-</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td>Oprowadzanka dla dzieci do 7 lat</td>
-                  <td>15 min</td>
-                  <td>40 zł</td>
-                  <td>-</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td>Oprowadzanka</td>
-                  <td>30 min</td>
-                  <td>60 zł</td>
-                  <td>210 zł</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td>Lonża</td>
-                  <td>30 min</td>
-                  <td>80 zł</td>
-                  <td>280 zł</td>
-                  <td>480 zł</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p className="muted">Zajęcia wprowadzające - krótkie lekcje praktyczne skupione na bezpieczeństwie, podstawach pielęgnacji i oswajaniu z koniem. Idealne dla dzieci i osób zaczynających przygodę z jeździectwem.</p>
-
-          <h3>TRENINGI</h3>
-          <div className="table-wrap">
-            <table className="price-table">
-              <thead>
-                <tr>
-                  <th>Rodzaj</th>
-                  <th>Czas</th>
-                  <th>Jednorazowo</th>
-                  <th>Karnet 4x</th>
-                  <th>Karnet 8x</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Indywidualny - początkujący</td>
-                  <td>45 min</td>
-                  <td>100 zł</td>
-                  <td>350 zł</td>
-                  <td>640 zł</td>
-                </tr>
-                <tr>
-                  <td>Indywidualny - zaawansowany</td>
-                  <td>60 min</td>
-                  <td>120 zł</td>
-                  <td>420 zł</td>
-                  <td>760 zł</td>
-                </tr>
-                <tr>
-                  <td>Trening 2-osobowy</td>
-                  <td>60 min</td>
-                  <td>90 zł</td>
-                  <td>315 zł</td>
-                  <td>560 zł</td>
-                </tr>
-                <tr>
-                  <td>Grupa 3-4 osoby</td>
-                  <td>60 min</td>
-                  <td>75 zł</td>
-                  <td>-</td>
-                  <td>-</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p className="muted">Treningi są dostosowywane do poziomu jeźdźca. Treningi odbywają się na placu bądź w sezonie letnim na łące.</p>
-
-          <h3>TEREN - min. 2 osoby</h3>
-          <div className="table-wrap">
-            <table className="price-table">
-              <thead>
-                <tr>
-                  <th>Czas</th>
-                  <th>Cena</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>30 min</td>
-                  <td>60 zł</td>
-                </tr>
-                <tr>
-                  <td>45 min</td>
-                  <td>75 zł</td>
-                </tr>
-                <tr>
-                  <td>60 min</td>
-                  <td>90 zł</td>
-                </tr>
-                <tr>
-                  <td>90 min</td>
-                  <td>120 zł</td>
-                </tr>
-                <tr>
-                  <td>120 min</td>
-                  <td>150 zł</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p className="muted">Wyjazdy w teren są dostosowane do poziomu jeźdźców. Tereny są zarówno w kłusie, jak i w galopie, zależnie od poziomu grupy oraz od pogody.</p>
-
-          <h3>OFERTY SPECJALNE</h3>
-          <div className="table-wrap">
-            <table className="price-table">
-              <thead>
-                <tr>
-                  <th>Usługa</th>
-                  <th>Cena</th>
-                  <th>Ilość h w siodle</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Dzień z koniem</td>
-                  <td>220 zł</td>
-                  <td>1 h</td>
-                </tr>
-                <tr>
-                  <td>Półkolonie (pn–pt)</td>
-                  <td>1000 zł</td>
-                  <td>5 h</td>
-                </tr>
-                <tr>
-                  <td>Kolonie z noclegiem (pn–pt)</td>
-                  <td>2000 zł</td>
-                  <td>12 h</td>
-                </tr>
-                <tr>
-                  <td>Rajd jednodniowy z ogniskiem</td>
-                  <td>300 zł</td>
-                  <td>3 h</td>
-                </tr>
-                <tr>
-                  <td>Rajd z noclegiem, biesiadą i śniadaniem</td>
-                  <td>500 zł</td>
-                  <td>3 h</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>400 zł</td>
-                  <td>2 h</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>300 zł</td>
-                  <td>1 h</td>
-                </tr>
-                <tr>
-                  <td>Transport na dzień z koniem lub półkolonie</td>
-                  <td>do ustalenia</td>
-                  <td>-</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p className="muted">Oferty specjalne obejmują całodniowe i kilkudniowe programy (półkolonie, kolonie, rajdy). Szczegóły, terminy i transport ustalamy indywidualnie. Zależnie od programu zapewniane są posiłki, dodatkowe atrakcje, nocleg. Zapewniona jest opieka instruktorska przez cały czas trwania programu. Półkolonie skierowane są do początkujących jeźdźców, natomiast kolonie są dla osób zaawansowanych. </p>
+          <h2>Karnety</h2>
+          <p>Dla osób, które chcą jeździć regularnie, przygotowaliśmy korzystne karnety:</p>
+          <ul>
+            <li>Karnet indywidualny x4 - <strong>380 zł</strong></li>
+            <li>Karnet indywidualny x8 - <strong>640 zł</strong></li>
+            <li>Karnet dla 2 osób x4 - <strong>280 zł</strong></li>
+            <li>Karnet dla 2 osób x8 - <strong>500 zł</strong></li>
+          </ul>
 
           <h2>Usługi dodatkowe</h2>
           <p>
-            Oprócz wymienionych usług oferujemy również:
+            Oprócz regularnych jazd organizujemy również wydarzenia i atrakcje na specjalne okazje:
           </p>
           <ul>
             <li>sesje zdjęciowe z końmi</li>
@@ -217,14 +48,16 @@ export default function OfertaPage() {
             <li>zawody jeździeckie</li>
             <li>wycieczki szkolne</li>
             <li>ogniska integracyjne</li>
+            <li>letnie kolonie i półkolonie</li>
             <li>zimowe półkolonie</li>
+            <li>rajdy konne z ogniskiem</li>
             <li>jazdy i lekcje w języku angielskim</li>
           </ul>
           <p>
             Ceny usług dodatkowych ustalane są indywidualnie - skontaktuj się z nami, aby dopasować ofertę
             do Twoich potrzeb.
           </p>
-          <p className="underline-text">
+          <p>
             Płatność gotówką lub blikiem.
           </p>
           
@@ -258,11 +91,6 @@ export default function OfertaPage() {
               <figure className="gallery__item">
                 <Image src="/oferta/karnety.jpg" alt="Karnety" width={800} height={1000} className="gallery__img" />
                 <figcaption>Karnety</figcaption>
-              </figure>
-
-              <figure className="gallery__item">
-                <Image src="/oferta/voucher.jpg" alt="Vouchery podarunkowe" width={800} height={1000} className="gallery__img" />
-                <figcaption>Vouchery podarunkowe</figcaption>
               </figure>
 
               <figure className="gallery__item">
