@@ -510,5 +510,12 @@ export const NEWS: NewsPost[] = [
     </ul>
     <p>Wszystkie szczegóły oraz wstępne zapisy w wiadomości prywatnej 🐴🐴🐴</p>
     `
+  },
+  {
+    id: 70,
+    title: 'Poznajcie nowego mieszkańca stajni',
+    date: '2026-03-08',
+    image: '/news/parys.jpg',
+    desc: 'Czas ogłosić naszą niespodziankę - witamy w nowym domu Parysku!'
   }
 ]
