@@ -432,12 +432,12 @@ body{
 
 /* Price table styles */
 .muted {
-  color: #6b7280; /* slightly muted gray */
+  color: var(--gold);
   font-size: 0.97rem;
-  margin-bottom: 12px;
+  margin: 12px 0 18px;
+  line-height: 1.7;
 }
 
-/* Underlined / emphasized text style used on ofert page */
 .underline-text {
   text-decoration: underline;
   text-decoration-color: var(--gold-strong);
@@ -448,10 +448,9 @@ body{
 }
 
 .table-wrap {
+  width: 100%;
   margin: 14px 0 22px;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  border-radius: 12px;
+  overflow: visible;
 }
 
 .price-table {
@@ -459,44 +458,147 @@ body{
   border-collapse: separate;
   border-spacing: 0;
   background: var(--surface);
-  min-width: 640px; /* allow horizontal scroll on small screens */
-  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
   border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  table-layout: fixed;
 }
+
 .price-table thead th {
-  position: sticky;
-  top: 0;
-  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,250,250,0.98));
+  background: #fff;
   color: var(--gold);
   font-weight: 700;
-  padding: 12px 16px;
+  padding: 18px 14px;
   text-align: center;
-  white-space: nowrap;
   vertical-align: middle;
   border-bottom: 1px solid var(--line);
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.35;
+  font-size: 1rem;
 }
+
 .price-table tbody td {
-  padding: 12px 16px;
+  padding: 18px 14px;
   border-bottom: 1px dashed var(--line);
   color: var(--text);
   vertical-align: middle;
   text-align: center;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.45;
+  font-size: 1rem;
 }
+
 .price-table tbody tr:nth-child(even) td {
   background: #fbfbfb;
 }
+
 .price-table tbody tr:hover td {
   background: #fffef8;
 }
 
-@media (max-width: 700px) {
-  .price-table { min-width: 520px; }
-  .price-table thead th, .price-table tbody td { padding: 10px 12px; font-size: 14px; }
-  .muted { font-size: 0.92rem; }
+.price-table th:first-child,
+.price-table td:first-child {
+  width: 34%;
+  text-align: left;
 }
 
+.price-table th:nth-child(2),
+.price-table td:nth-child(2) {
+  width: 14%;
+}
 
+.price-table th:nth-child(3),
+.price-table td:nth-child(3) {
+  width: 18%;
+}
+
+.price-table th:nth-child(4),
+.price-table td:nth-child(4) {
+  width: 17%;
+}
+
+.price-table th:nth-child(5),
+.price-table td:nth-child(5) {
+  width: 17%;
+}
+
+@media (max-width: 900px) {
+  .price-table thead th,
+  .price-table tbody td {
+    padding: 14px 10px;
+    font-size: 0.92rem;
+  }
+
+  .price-table th:first-child,
+  .price-table td:first-child {
+    width: 30%;
+  }
+
+  .price-table th:nth-child(2),
+  .price-table td:nth-child(2) {
+    width: 14%;
+  }
+
+  .price-table th:nth-child(3),
+  .price-table td:nth-child(3) {
+    width: 20%;
+  }
+
+  .price-table th:nth-child(4),
+  .price-table td:nth-child(4),
+  .price-table th:nth-child(5),
+  .price-table td:nth-child(5) {
+    width: 18%;
+  }
+}
+
+@media (max-width: 700px) {
+  .table-wrap {
+    margin: 12px 0 18px;
+  }
+
+  .price-table {
+    table-layout: auto;
+  }
+
+  .price-table thead th,
+  .price-table tbody td {
+    padding: 10px 8px;
+    font-size: 0.82rem;
+    line-height: 1.3;
+  }
+
+  .price-table th:first-child,
+  .price-table td:first-child {
+    width: 36%;
+  }
+
+  .price-table th:nth-child(2),
+  .price-table td:nth-child(2) {
+    width: 14%;
+  }
+
+  .price-table th:nth-child(3),
+  .price-table td:nth-child(3) {
+    width: 18%;
+  }
+
+  .price-table th:nth-child(4),
+  .price-table td:nth-child(4),
+  .price-table th:nth-child(5),
+  .price-table td:nth-child(5) {
+    width: 16%;
+  }
+
+  .muted {
+    font-size: 0.92rem;
+  }
+}
 .onas-image{
   margin-top: 24px;
   border-radius: 16px;

@@ -517,5 +517,12 @@ export const NEWS: NewsPost[] = [
     date: '2026-03-08',
     image: '/news/parys.jpg',
     desc: 'Czas ogłosić naszą niespodziankę - witamy w nowym domu Parysku!'
+  },
+  {
+    id: 71,
+    title: 'Dziecięca Akademia Jeździecka',
+    date: '2026-03-18',
+    image: '/news/akademia.png',
+    desc: 'Kochani, pragniemy poinformować że od soboty 11 kwietnia ruszamy z Dziecięcą Akademią Jeździecką! Zajęcia dla młodych adeptów jeździectwa będą odbywać się w soboty o godzinie 11:00 i będą trwać od 1-1,5h w zależności od wielkości i zaangażowania grupy 😀 serdecznie zapraszamy już dziś 🐴😎🐎'
   }
 ]

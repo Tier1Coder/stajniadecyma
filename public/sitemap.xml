@@ -36,6 +36,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://stajniadecyma.pl/aktualnosci/71</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-03-18</lastmod>
+  </url>
+  <url>
+    <loc>https://stajniadecyma.pl/aktualnosci/70</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-03-08</lastmod>
+  </url>
+  <url>
     <loc>https://stajniadecyma.pl/aktualnosci/67</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
