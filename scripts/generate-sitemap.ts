@@ -1,27 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-
-// Read news.ts as text and extract the exported NEWS array by simple eval in isolated scope.
-const newsFile = path.join(process.cwd(), 'src', 'app', 'aktualnosci', 'news.ts');
-const newsRaw = fs.readFileSync(newsFile, 'utf8');
-// Robust extraction: find 'export const NEWS' and extract the bracketed array by counting brackets
-// Safer parse: extract each news object fields via regex (id, date, image, title)
-let NEWS: { id: number; date: string; image: string; title: string }[] = [];
-try {
-  const objRegex = /\{[\s\S]*?id\s*:\s*(\d+)[\s\S]*?title\s*:\s*([`"'])([\s\S]*?)\2[\s\S]*?date\s*:\s*([`"'])([\d\-T:\s]+?)\4[\s\S]*?image\s*:\s*([`"'])([\s\S]*?)\6[\s\S]*?\}/g;
-  let m;
-  while ((m = objRegex.exec(newsRaw)) !== null) {
-    const id = Number(m[1]);
-    const title = m[3].trim();
-    const date = m[5].trim();
-    const image = m[7].trim();
-    if (!Number.isNaN(id) && date) {
-      NEWS.push({ id, date, image, title });
-    }
-  }
-} catch (err) {
-  console.warn('Parser error for news.ts, sitemap will contain only static pages:', String(err));
-}
+import { NEWS } from '../src/app/aktualnosci/news';
 
 console.log('DEBUG: parsed NEWS count =', NEWS.length);
 if (NEWS.length > 0) console.log('DEBUG: first news sample =', NEWS[0]);
@@ -47,7 +26,7 @@ function build() {
 
   const news = [...NEWS].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 20);
   for (const n of news) {
-    const url = `https://stajniadecyma.pl/aktualnosci/${n.id}`;
+    const url = `https://stajniadecyma.pl/aktualnosci/${n.slug}`;
   // ignore urls containing hash fragments just in case some source supplies them
   if (url.includes('#')) continue;
   body += `  <url>\n    <loc>${url}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.5</priority>\n    <lastmod>${n.date}</lastmod>\n  </url>\n`;

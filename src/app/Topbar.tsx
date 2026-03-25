@@ -7,6 +7,7 @@ import {
   useRef,
   useState,
 } from 'react';
+import { usePathname } from 'next/navigation';
 
 const menuLinks = [
   { href: '/onas', label: 'O nas' },
@@ -27,7 +28,10 @@ function getFocusableElements(container: HTMLElement | null): HTMLElement[] {
 }
 
 export default function Topbar() {
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const menuId = useId();
   const menuRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
@@ -44,6 +48,29 @@ export default function Topbar() {
       requestAnimationFrame(() => menuButtonRef.current?.focus());
     }
   }, []);
+
+  useEffect(() => {
+    function handleScroll() {
+      const scrollTop = window.scrollY;
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = scrollHeight > 0 ? Math.min(scrollTop / scrollHeight, 1) : 0;
+
+      setScrolled(scrollTop > 12);
+      setScrollProgress(progress);
+    }
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
+  }, [pathname]);
+
+  function isActiveLink(href: string): boolean {
+    return pathname === href || pathname.startsWith(`${href}/`);
+  }
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -133,12 +160,19 @@ export default function Topbar() {
   }
 
   return (
-    <header className="topbar">
+    <header className={`topbar${scrolled ? ' topbar--scrolled' : ''}${menuOpen ? ' topbar--menu-open' : ''}`}>
       <div className="wrap" ref={menuRef}>
-        <a href="/" className="brand">Stajnia Decyma</a>
+        <a href="/" className={`brand${pathname === '/' ? ' brand--active' : ''}`}>Stajnia Decyma</a>
         <nav className="menu" aria-label="Nawigacja główna">
           {menuLinks.map(link => (
-            <a key={link.href} href={link.href}>{link.label}</a>
+            <a
+              key={link.href}
+              href={link.href}
+              className={isActiveLink(link.href) ? 'is-active' : undefined}
+              aria-current={isActiveLink(link.href) ? 'page' : undefined}
+            >
+              {link.label}
+            </a>
           ))}
         </nav>
         <button
@@ -164,12 +198,17 @@ export default function Topbar() {
             <a
               key={link.href}
               href={link.href}
+              className={isActiveLink(link.href) ? 'is-active' : undefined}
+              aria-current={isActiveLink(link.href) ? 'page' : undefined}
               onClick={() => closeMenu(false)}
             >
               {link.label}
             </a>
           ))}
         </nav>
+      </div>
+      <div className="topbar-progress" aria-hidden="true">
+        <span style={{ transform: `scaleX(${scrollProgress})` }} />
       </div>
     </header>
   );

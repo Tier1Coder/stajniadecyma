@@ -4,6 +4,28 @@ const path = require('path');
 const newsFile = path.join(process.cwd(), 'src', 'app', 'aktualnosci', 'news.ts');
 const newsRaw = fs.readFileSync(newsFile, 'utf8');
 
+const slugCharMap = {
+  ą: 'a',
+  ć: 'c',
+  ę: 'e',
+  ł: 'l',
+  ń: 'n',
+  ó: 'o',
+  ś: 's',
+  ź: 'z',
+  ż: 'z',
+};
+
+function slugify(value) {
+  return value
+    .toLowerCase()
+    .replace(/[ąćęłńóśźż]/g, (char) => slugCharMap[char] || char)
+    .replace(/&/g, ' i ')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .replace(/-{2,}/g, '-');
+}
+
 let NEWS = [];
 try {
   const objRegex = /\{[\s\S]*?id\s*:\s*(\d+)[\s\S]*?title\s*:\s*([`"'])([\s\S]*?)\2[\s\S]*?date\s*:\s*([`"'])([\d\-T:\s]+?)\4[\s\S]*?image\s*:\s*([`"'])([\s\S]*?)\6[\s\S]*?\}/g;
@@ -14,7 +36,7 @@ try {
     const date = m[5].trim();
     const image = m[7].trim();
     if (!Number.isNaN(id) && date) {
-      NEWS.push({ id, date, image, title });
+      NEWS.push({ id, date, image, title, slug: `${slugify(title)}-${id}` });
     }
   }
 } catch (err) {
@@ -44,7 +66,7 @@ function build() {
 
   const news = NEWS.slice().sort((a, b) => b.date.localeCompare(a.date));
   for (const n of news) {
-  const url = `https://stajniadecyma.pl/aktualnosci/${n.id}`;
+    const url = `https://stajniadecyma.pl/aktualnosci/${n.slug}`;
     body += `  <url>\n    <loc>${url}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.5</priority>\n    <lastmod>${n.date}</lastmod>\n  </url>\n`;
   }
 

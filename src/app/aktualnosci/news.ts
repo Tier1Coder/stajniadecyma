@@ -1,12 +1,64 @@
-export type NewsPost = {
+import { getNewsExcerpt } from './utils';
+
+export type NewsCategory = 'wydarzenia' | 'oferty' | 'konie' | 'organizacja';
+export type NewsCtaType = 'offer' | 'booking' | 'contact';
+export type NewsSort = 'latest' | 'oldest';
+
+type RawNewsPost = {
   id: number
   title: string
   date: string
   image: string
   desc: string
+  slug?: string
+  category?: NewsCategory
+  featured?: boolean
+  ctaType?: NewsCtaType
 }
 
-export const NEWS: NewsPost[] = [
+export type NewsPost = RawNewsPost & {
+  slug: string
+  excerpt: string
+  category: NewsCategory
+  featured: boolean
+  ctaType: NewsCtaType
+}
+
+export const NEWS_CATEGORY_LABELS: Record<NewsCategory, string> = {
+  wydarzenia: 'Wydarzenia',
+  oferty: 'Oferty i zapisy',
+  konie: 'Życie stajni',
+  organizacja: 'Organizacja',
+};
+
+export const NEWS_CATEGORY_DESCRIPTIONS: Record<NewsCategory, string> = {
+  oferty: 'Półkolonie, akademia, vouchery i wpisy, które najczęściej prowadzą do zapisu.',
+  wydarzenia: 'Rajdy, turnusy, zawody, ogniska i wydarzenia z życia stajni.',
+  konie: 'Codzienność stajni, nowi mieszkańcy i wpisy poświęcone naszym koniom.',
+  organizacja: 'Ważne komunikaty, godziny, terminy i informacje porządkowe.',
+};
+
+export const NEWS_CATEGORIES = [
+  { value: 'all', label: 'Wszystkie' },
+  { value: 'oferty', label: NEWS_CATEGORY_LABELS.oferty },
+  { value: 'wydarzenia', label: NEWS_CATEGORY_LABELS.wydarzenia },
+  { value: 'konie', label: NEWS_CATEGORY_LABELS.konie },
+  { value: 'organizacja', label: NEWS_CATEGORY_LABELS.organizacja },
+] as const;
+
+export const NEWS_SORT_LABELS: Record<NewsSort, string> = {
+  latest: 'Najnowsze',
+  oldest: 'Najstarsze',
+};
+
+export const NEWS_SORT_OPTIONS = [
+  { value: 'latest', label: NEWS_SORT_LABELS.latest },
+  { value: 'oldest', label: NEWS_SORT_LABELS.oldest },
+] as const;
+
+export const NEWS_PAGE_SIZE = 9;
+
+const RAW_NEWS: RawNewsPost[] = [
   {
     id: 1,
     title: 'Sesja zdjęciowa z okazji Pierwszej Komunii Świętej',
@@ -40,7 +92,7 @@ export const NEWS: NewsPost[] = [
     title: 'Otwarcie stajni',
     date: '2024-07-01',
     image: '/news/stajnia.jpg',
-    desc: 'No i stało się! Oficjalne otwarcie stajni za nami! Boksy gotowe, czekają na nowych mieszkańców. Sserdecznie zapraszamy do naszej rajskiej Darnawki!'
+    desc: 'No i stało się! Oficjalne otwarcie stajni za nami! Boksy gotowe, czekają na nowych mieszkańców. Serdecznie zapraszamy do naszej rajskiej Darnawki!'
   },
   {
     id: 6,
@@ -61,7 +113,7 @@ export const NEWS: NewsPost[] = [
     title: 'Rada na upalny dzień',
     date: '2024-07-11',
     image: '/news/goraco.jpg',
-    desc: 'Sposób na jazdy w upalny dzień?? Pobudka o 5 rano i o 6 w siodle. Dziewczyny daly rade, no i oczywiście nasze konie też.'
+    desc: 'Sposób na jazdy w upalny dzień? Pobudka o 5 rano i o 6 w siodle. Dziewczyny dały radę, no i oczywiście nasze konie też.'
   },
   {
     id: 9,
@@ -131,7 +183,7 @@ export const NEWS: NewsPost[] = [
     title: 'Oferta specjalna',
     date: '2024-11-05',
     image: '/news/alexa.jpg',
-    desc: '!! Oferta specjalna tylko 11.11 !! -20zl dla naszych stałych klientów na drugą jazdę w tygodniu, serdecznie zapraszamy '
+    desc: 'Oferta specjalna tylko 11.11: -20 zł dla naszych stałych klientów na drugą jazdę w tygodniu. Serdecznie zapraszamy!'
   },
   {
     id: 19,
@@ -145,7 +197,7 @@ export const NEWS: NewsPost[] = [
     title: 'Mikołajkowy teren',
     date: '2024-12-06',
     image: '/news/mikolajki.jpg',
-    desc: 'Mikołajkowo, terenowo i tym razem dla odmiany troche miastowo.'
+    desc: 'Mikołajkowo, terenowo i tym razem dla odmiany trochę miastowo.'
   },
   {
     id: 21,
@@ -159,7 +211,7 @@ export const NEWS: NewsPost[] = [
     title: 'Wesołych Świąt',
     date: '2024-12-24',
     image: '/news/swieta.jpg',
-    desc: 'Kochani życzymy Wam wszystkim zdrowych spokojnych oraz radosnych Świąt Bożego Narodzenia pełnych rodzinnego ciepła. Koniki w święta odpoczywają, a my widzimy się juz 27 grudnia, aby spalać świąteczne kalorie'
+    desc: 'Kochani, życzymy Wam wszystkim zdrowych, spokojnych oraz radosnych Świąt Bożego Narodzenia, pełnych rodzinnego ciepła. Koniki w święta odpoczywają, a my widzimy się już 27 grudnia, aby spalać świąteczne kalorie.'
   },
   {
     id: 23,
@@ -216,7 +268,7 @@ export const NEWS: NewsPost[] = [
     title: 'Odwiedziny w stajni',
     date: '2025-01-30',
     image: '/news/dzieci.jpg',
-    desc: 'Dziś mieliśmy przyjemność gościć w naszej stajni naszą lokalną mlodzież serdecznie dziękujemy za odwiedziny i mamy nadzieję gościć Was częściej wraz z nadchodzącą wiosną serdecznie zapraszamy do tego typu odwiedzin w większym gronie jak również do organizacji różnych mini imprezek okolicznościowych'
+    desc: 'Dziś mieliśmy przyjemność gościć w naszej stajni naszą lokalną młodzież. Serdecznie dziękujemy za odwiedziny i mamy nadzieję gościć Was częściej wraz z nadchodzącą wiosną. Serdecznie zapraszamy do tego typu odwiedzin w większym gronie, jak również do organizacji różnych mini imprezek okolicznościowych.'
   },
   {
     id: 31,
@@ -258,7 +310,7 @@ export const NEWS: NewsPost[] = [
     title: 'Pierwszy Dzień Wiosny w Stajni Decyma',
     date: '2025-03-05',
     image: '/news/sauron.jpg',
-    desc: 'Kochani, w związku z nadchodzącym pierwszym dniem wiosny, który przypada w piątek 21 marca serdecznie zapraszamy na grupowy 1,5 godziny teren dla osób poruszających się swobodnie w 3 chodach z ogniskiem i kiełbaską. Cena - 120zl/os, maksymalna ilość osób - 6. Serdecznie zapraszamy!'
+    desc: 'Kochani, w związku z nadchodzącym pierwszym dniem wiosny, który przypada w piątek 21 marca, serdecznie zapraszamy na grupowy 1,5-godzinny teren dla osób poruszających się swobodnie w 3 chodach, z ogniskiem i kiełbaską. Cena: 120 zł/os., maksymalna liczba osób: 6. Serdecznie zapraszamy!'
   },
   {
     id: 37,
@@ -272,7 +324,7 @@ export const NEWS: NewsPost[] = [
     title: 'Dzień z koniem',
     date: '2025-04-08',
     image: '/news/piatek.jpg',
-    desc: 'Serdecznie zapraszamy na dzień z koniem w Stajni Decyma w postaci mini jednodniowej półkolonii w piątek 18.04 w godzinach 9:30 - 14:30. W ofercie: -  godzinny teren dostosowany do umiejętności grupy - opieka nad koniem- nauka lonżowania - mała przekąska Ilość miejsc 6, cena - 150zl'
+    desc: 'Serdecznie zapraszamy na dzień z koniem w Stajni Decyma w postaci mini jednodniowej półkolonii w piątek 18.04 w godzinach 9:30-14:30. W ofercie: godzinny teren dostosowany do umiejętności grupy, opieka nad koniem, nauka lonżowania oraz mała przekąska. Liczba miejsc: 6, cena: 150 zł.'
   },
   {
     id: 39,
@@ -286,7 +338,7 @@ export const NEWS: NewsPost[] = [
     title: 'Urodziny w stajni',
     date: '2025-04-16',
     image: '/news/uro.jpg',
-    desc: 'A dziś mini imprezka urodzinowa, pogoda dopisała, kopytne galopami nie pogardziły także i solenizantka zadowolona. Gdyby ktoś był chętny na zorganizowanie własnej ipmrezy u nas w stajni to zapraszamy do kontaktu.'
+    desc: 'A dziś mini imprezka urodzinowa, pogoda dopisała, kopytne galopami nie pogardziły, także i solenizantka zadowolona. Gdyby ktoś był chętny na zorganizowanie własnej imprezy u nas w stajni, to zapraszamy do kontaktu.'
   },
   {
     id: 41,
@@ -307,11 +359,11 @@ export const NEWS: NewsPost[] = [
     title: 'Dzień Matki w stajni',
     date: '2025-05-13',
     image: '/news/mama.jpg',
-    desc: 'Brak pomysłu na dzień matki? Zabierz swoją mamę do naszej stajni 26 maja na jazdę i skorzystaj z rabatu -20zł na każdy rodzaj jazdy (lonża, plac, teren) serdecznie zapraszamy do zapisów'
+    desc: 'Brak pomysłu na Dzień Matki? Zabierz swoją mamę do naszej stajni 26 maja na jazdę i skorzystaj z rabatu -20 zł na każdy rodzaj jazdy (lonża, plac, teren). Serdecznie zapraszamy do zapisów.'
   },
   {
     id: 44,
-    title: 'Stajnia decyma zaprasza',
+    title: 'Stajnia Decyma zaprasza',
     date: '2025-05-15',
     image: '/news/czerwiec.jpg',
     desc: 'Kochani zgodnie z obietnicą przedstawiamy kalendarz wydarzeń na nadchodzący miesiąc. Dla każdego coś miłego. Serdecznie zapraszamy do zapisów.'
@@ -321,7 +373,7 @@ export const NEWS: NewsPost[] = [
     title: 'Przygotowanie do zawodów',
     date: '2025-05-19',
     image: '/news/sau.jpg',
-    desc: 'Kochani choć pogoda nie rozpieszcza, patrzymy z optymizmem i bierzemy sie za przygotowania do nadchodzących w czerwcu wydarzeń, a dla naszych zawodników, którzy szykują się na zawody ujezdzeniowe w czerwcu oferta specjalna -  dodatkowy trening w cenie -50%. Serdecznie zapraszamy i zachęcamy do zapisów, to idealny test swoich aktualnych umiejętności w siodle, nowe doświadczenie i wspaniałe emocje oraz moc atrakcji.'
+    desc: 'Kochani, choć pogoda nie rozpieszcza, patrzymy z optymizmem i bierzemy się za przygotowania do nadchodzących w czerwcu wydarzeń, a dla naszych zawodników, którzy szykują się na zawody ujeżdżeniowe, mamy ofertę specjalną: dodatkowy trening w cenie -50%. Serdecznie zapraszamy i zachęcamy do zapisów. To idealny test swoich aktualnych umiejętności w siodle, nowe doświadczenie i wspaniałe emocje oraz moc atrakcji.'
   },
   {
     id: 46,
@@ -381,7 +433,7 @@ export const NEWS: NewsPost[] = [
   },
   {
     id: 54,
-    title: 'Letnie pólkolonie',
+    title: 'Letnie półkolonie',
     date: '2025-07-09',
     image: '/news/polkol.jpg',
     desc: 'Kochani z lekkim opóźnieniem informujemy, że podobnie jak w ubiegłym roku zapraszamy na jednodniowe półkolonie dla dzieci i młodzieży tej młodszej i starszej - szczegóły oraz zapisy w wiadomości prywatnej'
@@ -391,7 +443,7 @@ export const NEWS: NewsPost[] = [
     title: 'OFERTA SPECJALNA - PÓŁKOLONIE JEŹDZIECKIE Z TRANSPORTEM',
     date: '2025-07-11',
     image: '/news/spec.jpg',
-    desc: 'Chciałbyś wysłać swoje dziecko na półkolonie jeździeckie do naszej stajni lecz nie masz możliwości codziennego dowożenia? Mamy rozwiązanie! Oferujemy półkolonie jeździeckie z dowozem na terenie Sulechowa, Świebodzina oraz okolicznych wiosek w terminie 11.08 - 15.08 oraz 18.08 - 22.08 w okazyjnej cenie 1000zł/os! Więcej szczegółów w wiadomości prywatnej lub poprzez SMS.'
+    desc: 'Chciałbyś wysłać swoje dziecko na półkolonie jeździeckie do naszej stajni, lecz nie masz możliwości codziennego dowożenia? Mamy rozwiązanie! Oferujemy półkolonie jeździeckie z dowozem na terenie Sulechowa, Świebodzina oraz okolicznych wiosek w terminie 11.08-15.08 oraz 18.08-22.08 w okazyjnej cenie 1000 zł/os. Więcej szczegółów w wiadomości prywatnej lub poprzez SMS.'
   },
   {
     id: 56,
@@ -405,7 +457,7 @@ export const NEWS: NewsPost[] = [
     title: 'Turnus trzeci',
     date: '2025-08-12',
     image: '/news/turnusdzieci.jpg',
-    desc: 'Jak widać najmłodsi te się swietnie bawią na kolonii!'
+    desc: 'Jak widać, najmłodsi też się świetnie bawią na kolonii!'
   }, 
   {
     id: 58,
@@ -423,7 +475,7 @@ export const NEWS: NewsPost[] = [
    </ul>
    <p> Soboty będą dniami w których głównie będą odbywać się treningi 2 osobowe dla karnetowiczów oraz stałych klientów którzy przychodzą na jazdy regularnie.</p>
    <p> Pozostałe osoby, które nie mają możliwości ustalenia stałego terminu zapraszamy w pozostałe dni tygodnia - obowiązuje zasada "kto pierwszy ten lepszy".</p>
-   <p> Zapisy prosimy dokonywać poprzez SMS, whatsapp lub messenger, nie zawsze jesteśmy pod telefonem, a na wiadomości na pewno odpiszemy. </p>
+   <p> Zapisy prosimy dokonywać poprzez SMS, WhatsApp lub Messenger. Nie zawsze jesteśmy pod telefonem, ale na wiadomości na pewno odpiszemy. </p>
    `
   },
   {
@@ -431,14 +483,14 @@ export const NEWS: NewsPost[] = [
     title: 'Rajd na zakończenie lata',
     date: '2025-08-24',
     image: '/news/rajdlas.jpg',
-    desc: 'Kochani, serdecznie zapraszamy na rajd z okazji zakończenia lata w niedzielę 21 września w godzinach 11:00-15:00. Oferta skierowana jest dla osób jeżdżących. W ofercie teren dwugodzinny z przystankiem na ognisko - cena 170zl/os.. serdecznie zapraszamy'
+    desc: 'Kochani, serdecznie zapraszamy na rajd z okazji zakończenia lata w niedzielę 21 września w godzinach 11:00-15:00. Oferta skierowana jest do osób jeżdżących. W ofercie teren dwugodzinny z przystankiem na ognisko, cena: 170 zł/os. Serdecznie zapraszamy!'
   },
   {
     id: 60,
     title: 'Zapisy',
     date: '2025-08-26',
     image: '/news/wrz.jpg',
-    desc: 'Kochani, osoby które chciałyby ustalić stały termin na jazdy od września (nawet te z którymi już wcześniej było wstępnie ustalane) bardzo prosimy o wiadomość jakie dni i godziny wchodzą w gre oraz informację czy mają byc to treningi indywidualne, dwu ewentualnie trzyosobowe. Trochę nas już jest, a nie chcielibyśmy nikogo pominąć. Oczywiście zdajemy sobie sprawę że w dużej mierze zależy to wszystko od planu lekcji na nowy rok szkolny dlatego zbieramy zapisy do 5 września włącznie (choć wiadomo ze im szybciej tym lepiej)  jest to idealny moment aby zmobilizować się na nowo i po wakacjach wrócić do regularnych treningów które bedą odskocznią od codzienności'
+    desc: 'Kochani, osoby, które chciałyby ustalić stały termin na jazdy od września, nawet te, z którymi już wcześniej było to wstępnie ustalane, bardzo prosimy o wiadomość, jakie dni i godziny wchodzą w grę oraz informację, czy mają być to treningi indywidualne, dwu- ewentualnie trzyosobowe. Trochę nas już jest, a nie chcielibyśmy nikogo pominąć. Oczywiście zdajemy sobie sprawę, że w dużej mierze zależy to wszystko od planu lekcji na nowy rok szkolny, dlatego zbieramy zapisy do 5 września włącznie. To idealny moment, aby zmobilizować się na nowo i po wakacjach wrócić do regularnych treningów, które będą odskocznią od codzienności.'
   },
   {
     id: 61,
@@ -525,4 +577,190 @@ export const NEWS: NewsPost[] = [
     image: '/news/akademia.png',
     desc: 'Kochani, pragniemy poinformować że od soboty 11 kwietnia ruszamy z Dziecięcą Akademią Jeździecką! Zajęcia dla młodych adeptów jeździectwa będą odbywać się w soboty o godzinie 11:00 i będą trwać od 1-1,5h w zależności od wielkości i zaangażowania grupy 😀 serdecznie zapraszamy już dziś 🐴😎🐎'
   }
-]
+];
+
+const categoryOverrides: Partial<Record<number, NewsCategory>> = {
+  7: 'oferty',
+  19: 'oferty',
+  25: 'oferty',
+  27: 'oferty',
+  38: 'oferty',
+  39: 'oferty',
+  40: 'oferty',
+  43: 'oferty',
+  44: 'oferty',
+  54: 'oferty',
+  55: 'oferty',
+  60: 'oferty',
+  64: 'oferty',
+  65: 'oferty',
+  66: 'oferty',
+  69: 'oferty',
+  71: 'oferty',
+  15: 'konie',
+  70: 'konie',
+};
+
+const slugCharMap: Record<string, string> = {
+  ą: 'a',
+  ć: 'c',
+  ę: 'e',
+  ł: 'l',
+  ń: 'n',
+  ó: 'o',
+  ś: 's',
+  ź: 'z',
+  ż: 'z',
+};
+
+function slugify(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[ąćęłńóśźż]/g, (char) => slugCharMap[char] || char)
+    .replace(/&/g, ' i ')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .replace(/-{2,}/g, '-');
+}
+
+function getKeywordSource(post: RawNewsPost): string {
+  return `${post.title} ${post.desc}`.toLowerCase();
+}
+
+function guessCategory(post: RawNewsPost): NewsCategory {
+  const override = categoryOverrides[post.id];
+  if (override) {
+    return override;
+  }
+
+  if (post.category) {
+    return post.category;
+  }
+
+  const value = getKeywordSource(post);
+
+  if (
+    /(wendy|alexa|maja|marlen|billi|agaw|parysk|mieszkańc|nowego mieszkańca|spacer agawy|sauron|konik|nasze konie)/.test(
+      value
+    )
+  ) {
+    return 'konie';
+  }
+
+  if (
+    /(oferta|promocj|rabat|voucher|karnet|półkoloni|polkoloni|wakacj|feri|akademi|dzień z koniem|zapis|zapisy|specjalna|transportem)/.test(
+      value
+    )
+  ) {
+    return 'oferty';
+  }
+
+  if (
+    /(grafik|dni wolne|rok szkolny|nieczynne|szyld|otwarcie stajni|telefon|whatsapp|messenger|sms)/.test(
+      value
+    )
+  ) {
+    return 'organizacja';
+  }
+
+  return 'wydarzenia';
+}
+
+function guessCtaType(post: RawNewsPost, category: NewsCategory): NewsCtaType {
+  if (post.ctaType) {
+    return post.ctaType;
+  }
+
+  const value = getKeywordSource(post);
+
+  if (category === 'oferty') {
+    return 'offer';
+  }
+
+  if (/(rajd|zawody|teren|turnus|wydarzen|ognisko|urodzin)/.test(value)) {
+    return 'booking';
+  }
+
+  return 'contact';
+}
+
+const featuredIds = new Set([71, 69, 66, 65, 54, 40]);
+
+function compareByDate(a: NewsPost, b: NewsPost): number {
+  return b.date.localeCompare(a.date);
+}
+
+function enrichNewsPost(post: RawNewsPost): NewsPost {
+  const category = guessCategory(post);
+
+  return {
+    ...post,
+    slug: post.slug || `${slugify(post.title)}-${post.id}`,
+    excerpt: getNewsExcerpt(post.desc, 160),
+    category,
+    featured: post.featured ?? featuredIds.has(post.id),
+    ctaType: guessCtaType(post, category),
+  };
+}
+
+export const NEWS: NewsPost[] = RAW_NEWS.map(enrichNewsPost).sort(compareByDate);
+
+export function getNewsCategoryLabel(category: NewsCategory): string {
+  return NEWS_CATEGORY_LABELS[category];
+}
+
+export function getNewsSortLabel(sort: NewsSort): string {
+  return NEWS_SORT_LABELS[sort];
+}
+
+export function findNewsById(id: number): NewsPost | undefined {
+  return NEWS.find((post) => post.id === id);
+}
+
+export function findNewsBySlug(slug: string): NewsPost | undefined {
+  return NEWS.find((post) => post.slug === slug);
+}
+
+export function resolveNewsRouteParam(param: string): {
+  post?: NewsPost
+  canonicalSlug?: string
+  legacyId: boolean
+} {
+  if (/^\d+$/.test(param)) {
+    const post = findNewsById(Number(param));
+    return { post, canonicalSlug: post?.slug, legacyId: true };
+  }
+
+  const post = findNewsBySlug(param);
+  return { post, canonicalSlug: post?.slug, legacyId: false };
+}
+
+export function getRelatedNews(post: NewsPost, limit = 3): NewsPost[] {
+  const primary = NEWS.filter(
+    (candidate) => candidate.id !== post.id && candidate.category === post.category
+  );
+  const secondary = NEWS.filter(
+    (candidate) =>
+      candidate.id !== post.id &&
+      candidate.category !== post.category &&
+      candidate.ctaType === post.ctaType
+  );
+
+  const fallback = NEWS.filter((candidate) => candidate.id !== post.id);
+  const combined = [...primary, ...secondary, ...fallback];
+  const unique = combined.filter(
+    (candidate, index) => combined.findIndex((item) => item.id === candidate.id) === index
+  );
+
+  return unique.slice(0, limit);
+}
+
+export function sortNewsPosts(posts: NewsPost[], sort: NewsSort): NewsPost[] {
+  const sorted = [...posts];
+
+  if (sort === 'oldest') {
+    return sorted.sort((a, b) => a.date.localeCompare(b.date));
+  }
+
+  return sorted.sort(compareByDate);
+}

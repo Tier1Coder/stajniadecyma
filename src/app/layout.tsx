@@ -73,7 +73,7 @@ function buildJsonLd() {
       headline: latest.title,
       datePublished: latest.date,
       image: `https://stajniadecyma.pl${toWebpSrc(latest.image)}`,
-      url: 'https://stajniadecyma.pl/aktualnosci',
+      url: `https://stajniadecyma.pl/aktualnosci/${latest.slug}`,
     };
   }
 
