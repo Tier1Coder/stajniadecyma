@@ -63,11 +63,40 @@ export default async function NewsPostPage(props: PageProps) {
   const id = Number(params.id);
   const post = NEWS.find((p) => p.id === id);
   if (!post) return notFound();
+  const url = `https://stajniadecyma.pl/aktualnosci/${id}`;
+  const imageUrl = `https://stajniadecyma.pl${toWebpSrc(post.image)}`;
+  const jsonLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: seoDescriptionFromPost(post.desc),
+    datePublished: post.date,
+    dateModified: post.date,
+    image: [imageUrl],
+    url,
+    mainEntityOfPage: url,
+    author: {
+      '@type': 'Organization',
+      name: 'Stajnia Decyma',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Stajnia Decyma',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://stajniadecyma.pl/android-chrome-512x512.png',
+      },
+    },
+  });
 
   return (
     <div className="page-bg">
       <section className="card card--text">
         <div className="wrap">
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: jsonLd }}
+          />
           <h1>{post.title}</h1>
           <time className="news-date">{post.date}</time>
           <div style={{ margin: '1rem 0' }}>
