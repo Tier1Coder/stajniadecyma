@@ -59,7 +59,7 @@ const offerServices = [
 ];
 
 function build() {
-  const header = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+  const header = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n';
   const footer = '</urlset>\n';
 
   const pages = [
@@ -85,7 +85,8 @@ function build() {
   const news = NEWS.slice().sort((a, b) => b.date.localeCompare(a.date));
   for (const n of news) {
     const url = `https://stajniadecyma.pl/aktualnosci/${n.slug}`;
-    body += `  <url>\n    <loc>${url}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.5</priority>\n    <lastmod>${n.date}</lastmod>\n  </url>\n`;
+    const imageUrl = `https://stajniadecyma.pl${n.image}`;
+    body += `  <url>\n    <loc>${url}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.5</priority>\n    <lastmod>${n.date}</lastmod>\n    <image:image>\n      <image:loc>${imageUrl}</image:loc>\n    </image:image>\n  </url>\n`;
   }
 
   fs.writeFileSync(sitemapPath, header + body + footer, 'utf8');

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://stajniadecyma.pl/</loc>
     <changefreq>daily</changefreq>
@@ -76,429 +76,669 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://stajniadecyma.pl/aktualnosci/rodzinny-dzien-dziecka-w-stajni-decyma-74</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-05-08</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/dziendziecka.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://stajniadecyma.pl/aktualnosci/majowe-ognisko-i-kameralne-imprezy-73</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-05-03</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/ognisko2.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://stajniadecyma.pl/aktualnosci/pierwsze-zajecia-akademii-72</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-04-11</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/akademia1.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://stajniadecyma.pl/aktualnosci/dziecieca-akademia-jezdziecka-71</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-03-18</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/akademia.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/poznajcie-nowego-mieszkanca-stajni-70</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-03-08</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/parys.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/zimowe-ognisko-po-jezdzie-67</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-02-01</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/ogniskozima.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/letnia-oferta-69</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-01-31</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/ofertaletnia.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/teren-zimowy-68</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-01-14</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/615790671_775032115616351_6964648673041066379_n.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/zimowe-jednodniowe-polkolonie-jezdzieckie-66</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-01-03</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/zimpolkol.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/vouchery-podarunkowe-65</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-11-30</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/voucher.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/jesienno-zimowe-tereny-okolicznosciowe-64</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-10-24</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/jesien_teren.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/teren-14-pazdziernika-63</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-10-07</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/dzien-naucz.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/rajd-na-zakonczenie-lata-62</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-09-21</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/rajd2.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/i-zawody-skokowe-61</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-09-01</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/zawody-skok.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/zapisy-60</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-08-26</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/wrz.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/rajd-na-zakonczenie-lata-59</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-08-24</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/rajdlas.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/nowy-rok-szkolny-58</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-08-21</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/rok.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/turnus-trzeci-57</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-08-12</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/turnusdzieci.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/rajd-konny-56</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-07-20</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/rajd.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/oferta-specjalna-polkolonie-jezdzieckie-z-transportem-55</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-07-11</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/spec.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/letnie-polkolonie-54</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-07-09</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/polkol.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/drugi-turnus-53</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-07-07</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/turnus225.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/pierwszy-turnus-52</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-06-30</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/turnus25.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/gadzety-firmowe-51</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-06-28</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/koszulki.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/i-zawody-ujezdzeniowe-50</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-06-19</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/zawody.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/nasza-lubuska-49</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-06-10</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/gazeta.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/przygotowanie-do-zawodow-48</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-06-09</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/kotylion.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/dzien-dziecka-w-stajni-47</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-06-02</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/radoszyn.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/podroze-ze-smakiem-odkryj-lubuskie-rarytasy-46</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-05-26</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/lubuskie.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/przygotowanie-do-zawodow-45</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-05-19</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/sau.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/stajnia-decyma-zaprasza-44</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-05-15</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/czerwiec.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/dzien-matki-w-stajni-43</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-05-13</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/mama.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/sezon-pastwiskowy-rozpoczety-42</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-05-10</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/10maj.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/majowka-w-stajni-41</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-05-03</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/majowka.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/urodziny-w-stajni-40</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-04-16</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/uro.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/majowka-w-stajni-39</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-04-11</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/drzewo.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/dzien-z-koniem-38</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-04-08</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/piatek.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/pierwszy-dzien-wiosny-37</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-03-21</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/wiosna.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/pierwszy-dzien-wiosny-w-stajni-decyma-36</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-03-05</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/sauron.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/kawka-w-stajni-35</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-03-04</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/nowekonie.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/szyld-34</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-02-19</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/baner.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/teren-w-sniegu-33</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-02-16</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/terensnieg.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/zimowa-aura-32</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-02-10</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/lakasnieg.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/piekne-widoki-31</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-02-09</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/teren2.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/odwiedziny-w-stajni-30</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-01-30</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/dzieci.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/zimowe-atrakcje-29</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-01-23</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/marlen.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/zimowe-polkolonie-28</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-01-21</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/zimowe.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/polkolonie-27</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-01-18</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/polkolonie.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/karnety-26</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-01-09</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/karnety.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/plany-na-wakacje-25</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-01-02</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/wsiodle.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/noworoczne-zyczenia-24</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2025-01-01</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/nowyrok.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/zimowy-teren-23</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2024-12-29</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/maja.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/wesolych-swiat-22</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2024-12-24</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/swieta.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/spelniamy-zyczenia-21</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2024-12-08</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/dom.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/mikolajkowy-teren-20</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2024-12-06</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/mikolajki.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/plany-na-ferie-zimowe-19</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2024-11-19</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/ferie.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/oferta-specjalna-18</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2024-11-05</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/alexa.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/wendy-17</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2024-10-26</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/wendy.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/dni-wolne-16</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2024-10-22</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/listopad.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/niespodzianka-15</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2024-09-28</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/nowekonie.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/rodzinny-trening-14</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2024-09-27</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/3osoby.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/jazda-na-kantarze-13</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2024-09-08</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/kantar.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/pierwszy-spacer-agawy-12</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2024-08-21</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/agawaspacer.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/piaty-turnus-11</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2024-08-04</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/turnus5.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/turnus-trzeci-czas-start-10</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2024-07-17</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/turnus3.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/koniec-drugiego-turnusu-9</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2024-07-12</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/koniecturnus2.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/rada-na-upalny-dzien-8</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2024-07-11</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/goraco.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/dzien-z-koniem-w-stajni-decyma-7</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2024-07-10</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/dzienzkon.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/drugi-turnus-6</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2024-07-09</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/turnus2.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/otwarcie-stajni-5</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2024-07-01</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/stajnia.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/koniec-pierwszego-turnusu-4</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2024-06-28</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/koniecturnus1.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/rozpoczecie-turnusu-3</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2024-06-24</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/turnus1.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/sesja-zdjeciowa-z-okazji-pierwszej-komunii-swietej-1</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2024-05-22</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/komunia.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://stajniadecyma.pl/aktualnosci/czworobok-2</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2024-04-19</lastmod>
+    <image:image>
+      <image:loc>https://stajniadecyma.pl/news/czworobok.jpg</image:loc>
+    </image:image>
   </url>
 </urlset>

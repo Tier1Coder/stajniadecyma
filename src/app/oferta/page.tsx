@@ -205,6 +205,7 @@ export default function OfertaPage() {
             <li>sesje zdjęciowe z końmi</li>
             <li>vouchery podarunkowe</li>
             <li>urodziny i przyjęcia okolicznościowe</li>
+            <li>Dzień Dziecka</li>
             <li>zawody jeździeckie</li>
             <li>wycieczki szkolne</li>
             <li>ogniska integracyjne</li>
@@ -254,7 +255,7 @@ export default function OfertaPage() {
 
               <figure className="gallery__item">
                 <Image
-                  src="/oferta/ognisko.jpg"
+                  src="/oferta/ognisko2.jpg"
                   alt="Ognisko integracyjne"
                   width={800}
                   height={1000}
@@ -316,6 +317,17 @@ export default function OfertaPage() {
                   className="gallery__img"
                 />
                 <figcaption>Zajęcia dla dzieci</figcaption>
+              </figure>
+
+              <figure className="gallery__item">
+                <Image
+                  src="/news/dziendziecka.jpg"
+                  alt="Dzień Dziecka"
+                  width={800}
+                  height={1000}
+                  className="gallery__img"
+                />
+                <figcaption>Dzień Dziecka</figcaption>
               </figure>
 
               <figure className="gallery__item">

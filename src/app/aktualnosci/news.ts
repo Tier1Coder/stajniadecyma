@@ -579,6 +579,41 @@ const RAW_NEWS: RawNewsPost[] = [
     date: '2026-03-18',
     image: '/news/akademia.png',
     desc: 'Kochani, pragniemy poinformować że od soboty 11 kwietnia ruszamy z Dziecięcą Akademią Jeździecką! Zajęcia dla młodych adeptów jeździectwa będą odbywać się w soboty o godzinie 11:00 i będą trwać od 1-1,5h w zależności od wielkości i zaangażowania grupy 😀 serdecznie zapraszamy już dziś 🐴😎🐎'
+  },
+  {
+    id: 72,
+    title: 'Pierwsze zajęcia Akademii',
+    date: '2026-04-11',
+    image: '/news/akademia1.jpg',
+    desc: 'Pierwsze spotkanie Dziecięcej Akademii Jeździeckiej za nami. Dziękujemy za obecność, zaangażowanie i wspólnie spędzony czas. Cieszymy się, że mogliśmy rozpocząć tę przygodę razem z Wami i już nie możemy doczekać się kolejnych zajęć.'
+  },
+  {
+    id: 73,
+    title: 'Majowe ognisko i kameralne imprezy',
+    date: '2026-05-03',
+    image: '/news/ognisko2.jpg',
+    desc: 'Kochani, przypominamy o możliwości zorganizowania kameralnych imprez i ognisk, szczególnie w maju i czerwcu. Serdecznie zapraszamy do kontaktu i wspólnego spędzenia czasu w naszej stajni.'
+  },
+  {
+    id: 74,
+    title: 'Rodzinny Dzień Dziecka w Stajni Decyma',
+    date: '2026-05-08',
+    image: '/news/dziendziecka.jpg',
+    desc: `
+    <p>Kochani! Wreszcie możemy to oficjalnie ogłosić. Już 30 maja, w sobotę, zapraszamy Was na wyjątkowy Rodzinny Dzień Dziecka w Stajni Decyma.</p>
+    <p>Chcemy, aby ten czas był pełen magii i bliskości z naszymi kopytnymi przyjaciółmi, dlatego przygotowaliśmy dla Was coś naprawdę specjalnego.</p>
+    <p><strong>Malowanie koni!</strong> Pod naszym okiem dzieci będą mogły puścić wodze fantazji i przyozdobić nasze wierzchowce kolorami. Używamy wyłącznie bezpiecznych i nietoksycznych farb, które są w pełni przyjazne dla zwierząt i dzieci.</p>
+    <p><strong>Wstęp: 30 zł / osoba</strong></p>
+    <p>W ramach biletu zapewniamy:</p>
+    <ul>
+      <li>biesiadę przy ognisku: kiełbaskę, pieczywo, napoje i dodatki,</li>
+      <li>stajenny tor przeszkód,</li>
+      <li>kącik kreatywny z kolorowankami dla najmłodszych.</li>
+    </ul>
+    <p><strong>Dodatkowe atrakcje płatne gotówką:</strong> przy stanowiskach będą czekać puszki, dlatego prosimy o przygotowanie drobnych nominałów 5, 10 i 20 zł.</p>
+    <p><strong>Ważne:</strong> ze względu na organizację prowiantu oraz Wasz komfort liczba miejsc jest ograniczona. Bardzo prosimy o potwierdzenie obecności do 28 maja w wiadomości prywatnej lub pod numerem telefonu.</p>
+    <p>Serdecznie zapraszamy do wspólnego świętowania. Do zobaczenia!</p>
+    `
   }
 ];
 
