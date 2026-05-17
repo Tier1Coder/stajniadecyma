@@ -13,6 +13,7 @@ import { formatNewsDate, getSeoDescription } from '../utils';
 import { toWebpSrc } from '../../../../lib/image';
 import SmartImage from '../../../components/SmartImage';
 import NewsCard from '../NewsCard';
+import { getOfferServiceBySlug, getOfferServiceHref } from '../../oferta/services';
 
 type RouteParams = { slug: string };
 type PageProps = { params: Promise<RouteParams> };
@@ -162,6 +163,7 @@ export default async function NewsPostPage(props: PageProps) {
   const categoryLabel = getNewsCategoryLabel(post.category);
   const canonicalUrl = `${siteUrl}/aktualnosci/${post.slug}`;
   const relatedPosts = getRelatedNews(post, 3);
+  const relatedService = post.serviceSlug ? getOfferServiceBySlug(post.serviceSlug) : undefined;
 
   return (
     <div className="page-bg">
@@ -225,6 +227,21 @@ export default async function NewsPostPage(props: PageProps) {
             className="news-post-content"
             dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.desc) }}
           />
+          {relatedService ? (
+            <section className="news-service-link">
+              <p className="news-service-link__eyebrow">Powiązana usługa</p>
+              <h2>{relatedService.shortTitle}</h2>
+              <p>{relatedService.excerpt}</p>
+              <div className="news-post-cta__actions">
+                <Link className="btn-primary" href={getOfferServiceHref(relatedService.slug)}>
+                  Zobacz stronę usługi
+                </Link>
+                <Link className="btn-secondary" href="/oferta">
+                  Wszystkie usługi
+                </Link>
+              </div>
+            </section>
+          ) : null}
           <div className="news-post-cta">
             <p className="news-post-cta__text">{ctaCopyByType[post.ctaType]}</p>
             <div className="news-post-cta__actions">

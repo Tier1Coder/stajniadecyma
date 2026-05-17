@@ -36,6 +36,46 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://stajniadecyma.pl/oferta/nauka-jazdy-konnej</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stajniadecyma.pl/oferta/jazda-konna-dla-dzieci</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stajniadecyma.pl/oferta/jazda-konna-dla-doroslych</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stajniadecyma.pl/oferta/tereny-konne</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stajniadecyma.pl/oferta/polkolonie-jezdzieckie</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stajniadecyma.pl/oferta/vouchery-podarunkowe</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stajniadecyma.pl/oferta/urodziny-w-stajni</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stajniadecyma.pl/oferta/wycieczki-szkolne</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://stajniadecyma.pl/aktualnosci/dziecieca-akademia-jezdziecka-71</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

@@ -1,8 +1,80 @@
-export const metadata = {
+import Link from 'next/link';
+import type { Metadata } from 'next';
+import FaqSection, { buildFaqJsonLd, type FaqItem } from '../../components/FaqSection';
+
+const shareImagePath = '/android-chrome-512x512.png';
+const kontaktDescription =
+  'Kontakt do Stajni Decyma w Darnawie: telefon, e-mail, godziny kontaktu i mapa dojazdu. Blisko Sulechowa, Świebodzina i okolic.';
+
+const kontaktFaqItems: FaqItem[] = [
+  {
+    question: 'Jak najszybciej skontaktować się ze Stajnią Decyma?',
+    answer:
+      'Najszybszy kontakt uzyskasz przez Facebooka lub telefonicznie. Jeśli wolisz wiadomość, możesz też napisać sms, a odpowiemy tak szybko, jak to możliwe.',
+    content: (
+      <p>
+        Najszybszy kontakt uzyskasz przez{' '}
+        <a
+          href="https://www.facebook.com/profile.php?id=100093287093369"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebooka
+        </a>{' '}
+        lub telefonicznie. Jeśli wolisz wiadomość, możesz też napisać SMS, a odpowiemy tak szybko, jak to
+        możliwe.
+      </p>
+    ),
+  },
+  {
+    question: 'Gdzie znajduje się Stajnia Decyma?',
+    answer:
+      'Znajdujemy się pod adresem Darnawa 28, 66-213 Skąpe w województwie lubuskim. Tuż za przystankiem autobusowym. To dogodna lokalizacja dla osób z Sulechowa, Świebodzina i okolic.',
+  },
+  {
+    question: 'W jakich godzinach można się z Wami kontaktować?',
+    answer:
+      'Kontakt telefoniczny i organizacyjny prowadzimy od wtorku do piątku w godzinach 9:00-19:00 oraz w soboty i niedziele w godzinach 9:00-17:00. Na wiadomości odpowiadamy możliwie szybko.',
+  },
+  {
+    question: 'Jak umówić pierwszy termin jazdy?',
+    answer:
+      'Wystarczy zadzwonić lub napisać do nas wiadomość. Podpowiemy, który rodzaj zajęć z oferty będzie najlepszy na start i ustalimy dogodny termin.',
+    content: (
+      <p>
+        Wystarczy zadzwonić lub napisać do nas wiadomość. Podpowiemy, który rodzaj zajęć z{' '}
+        <Link href="/oferta">oferty</Link> będzie najlepszy na start i ustalimy dogodny termin.
+      </p>
+    ),
+  },
+];
+
+export const metadata: Metadata = {
   title: 'Kontakt - Stajnia Decyma Darnawa',
-  description: 'Skontaktuj się ze Stajnią Decyma w Darnawie: telefon, e-mail i mapa dojazdu. Obsługujemy Sulechów, Świebodzin i okolice.',
-  keywords: ['kontakt stajnia decyma', 'stajnia darnawa', 'jazda konna kontakt'],
+  description: kontaktDescription,
+  keywords: [
+    'kontakt stajnia decyma',
+    'stajnia darnawa',
+    'jazda konna kontakt',
+    'stajnia sulechów kontakt',
+    'stajnia świebodzin kontakt',
+  ],
   alternates: { canonical: '/kontakt' },
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: 'website',
+    locale: 'pl_PL',
+    url: '/kontakt',
+    title: 'Kontakt - Stajnia Decyma Darnawa',
+    description: kontaktDescription,
+    images: [{ url: shareImagePath, alt: 'Kontakt do Stajni Decyma' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kontakt - Stajnia Decyma Darnawa',
+    description: kontaktDescription,
+    images: [shareImagePath],
+  },
 };
 
 export default function KontaktPage() {
@@ -10,6 +82,10 @@ export default function KontaktPage() {
     <div className="page-bg">
       <section className="card card--text">
         <div className="wrap">
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: buildFaqJsonLd(kontaktFaqItems) }}
+          />
           <h1>Kontakt - Stajnia Decyma (Darnawa, Lubuskie)</h1>
           <p>Masz pytania lub chcesz umówić jazdę? Skontaktuj się z nami.</p>
 
@@ -46,6 +122,12 @@ export default function KontaktPage() {
               </div>
             </div>
           </div>
+
+          <FaqSection
+            heading="Najczęściej zadawane pytania o kontakcie i zapisach"
+            intro="To najważniejsze informacje dla osób, które chcą szybko znaleźć dojazd, formę kontaktu i sposób umówienia pierwszej jazdy."
+            items={kontaktFaqItems}
+          />
         </div>
       </section>
     </div>

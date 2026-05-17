@@ -1,4 +1,5 @@
 import { getNewsExcerpt } from './utils';
+import type { OfferServiceSlug } from '../oferta/services';
 
 export type NewsCategory = 'wydarzenia' | 'oferty' | 'konie' | 'organizacja';
 export type NewsCtaType = 'offer' | 'booking' | 'contact';
@@ -14,6 +15,7 @@ type RawNewsPost = {
   category?: NewsCategory
   featured?: boolean
   ctaType?: NewsCtaType
+  serviceSlug?: OfferServiceSlug
 }
 
 export type NewsPost = RawNewsPost & {
@@ -22,6 +24,7 @@ export type NewsPost = RawNewsPost & {
   category: NewsCategory
   featured: boolean
   ctaType: NewsCtaType
+  serviceSlug?: OfferServiceSlug
 }
 
 export const NEWS_CATEGORY_LABELS: Record<NewsCategory, string> = {
@@ -601,6 +604,30 @@ const categoryOverrides: Partial<Record<number, NewsCategory>> = {
   70: 'konie',
 };
 
+const serviceOverrides: Partial<Record<number, OfferServiceSlug>> = {
+  7: 'polkolonie-jezdzieckie',
+  19: 'polkolonie-jezdzieckie',
+  25: 'polkolonie-jezdzieckie',
+  27: 'polkolonie-jezdzieckie',
+  38: 'polkolonie-jezdzieckie',
+  39: 'tereny-konne',
+  40: 'urodziny-w-stajni',
+  43: 'jazda-konna-dla-doroslych',
+  44: 'nauka-jazdy-konnej',
+  45: 'jazda-konna-dla-doroslych',
+  47: 'wycieczki-szkolne',
+  54: 'polkolonie-jezdzieckie',
+  55: 'polkolonie-jezdzieckie',
+  59: 'tereny-konne',
+  60: 'nauka-jazdy-konnej',
+  63: 'tereny-konne',
+  64: 'tereny-konne',
+  65: 'vouchery-podarunkowe',
+  66: 'polkolonie-jezdzieckie',
+  69: 'polkolonie-jezdzieckie',
+  71: 'jazda-konna-dla-dzieci',
+};
+
 const slugCharMap: Record<string, string> = {
   ą: 'a',
   ć: 'c',
@@ -684,6 +711,49 @@ function guessCtaType(post: RawNewsPost, category: NewsCategory): NewsCtaType {
   return 'contact';
 }
 
+function guessServiceSlug(post: RawNewsPost, category: NewsCategory): OfferServiceSlug | undefined {
+  if (post.serviceSlug) {
+    return post.serviceSlug;
+  }
+
+  const override = serviceOverrides[post.id];
+  if (override) {
+    return override;
+  }
+
+  const value = getKeywordSource(post);
+
+  if (/(voucher|prezent)/.test(value)) {
+    return 'vouchery-podarunkowe';
+  }
+
+  if (/(urodzin|imprezk|okolicznościow)/.test(value)) {
+    return 'urodziny-w-stajni';
+  }
+
+  if (/(wycieczk|przedszkol|szkoln|młodzież lokalną)/.test(value)) {
+    return 'wycieczki-szkolne';
+  }
+
+  if (/(półkoloni|polkoloni|dzień z koniem|turnus|wakacj|feri|transportem)/.test(value)) {
+    return 'polkolonie-jezdzieckie';
+  }
+
+  if (/(rajd|teren|ognisko|trasy|w siodle poza placem)/.test(value)) {
+    return 'tereny-konne';
+  }
+
+  if (/(akademi|dzieci|najmłodsz|młodych adeptów)/.test(value)) {
+    return 'jazda-konna-dla-dzieci';
+  }
+
+  if (category === 'oferty' || /(trening|karnet|zapisy|regularnych treningów)/.test(value)) {
+    return 'nauka-jazdy-konnej';
+  }
+
+  return undefined;
+}
+
 const featuredIds = new Set([71, 69, 66, 65, 54, 40]);
 
 function compareByDate(a: NewsPost, b: NewsPost): number {
@@ -692,6 +762,7 @@ function compareByDate(a: NewsPost, b: NewsPost): number {
 
 function enrichNewsPost(post: RawNewsPost): NewsPost {
   const category = guessCategory(post);
+  const serviceSlug = guessServiceSlug(post, category);
 
   return {
     ...post,
@@ -700,6 +771,7 @@ function enrichNewsPost(post: RawNewsPost): NewsPost {
     category,
     featured: post.featured ?? featuredIds.has(post.id),
     ctaType: guessCtaType(post, category),
+    serviceSlug,
   };
 }
 

@@ -3,6 +3,7 @@ import type { NewsPost } from './news';
 import { formatNewsDate, getNewsExcerpt } from './utils';
 import { getNewsCategoryLabel } from './news';
 import SmartImage from '../../components/SmartImage';
+import { getOfferServiceBySlug, getOfferServiceHref } from '../oferta/services';
 
 type NewsCardProps = {
   post: NewsPost
@@ -20,6 +21,7 @@ export default function NewsCard({
   showActions = true,
 }: NewsCardProps) {
   const href = `/aktualnosci/${post.slug}`;
+  const relatedService = post.serviceSlug ? getOfferServiceBySlug(post.serviceSlug) : undefined;
   const categoryLabel = getNewsCategoryLabel(post.category);
   const excerpt = compact
     ? getNewsExcerpt(post.desc, 110)
@@ -59,9 +61,15 @@ export default function NewsCard({
           <Link href={href} className="btn-primary" aria-label={`Czytaj więcej: ${post.title}`}>
             Czytaj więcej
           </Link>
-          <Link href="/kontakt" className="btn-secondary">
-            Kontakt
-          </Link>
+          {relatedService ? (
+            <Link href={getOfferServiceHref(relatedService.slug)} className="btn-secondary">
+              Zobacz usługę
+            </Link>
+          ) : (
+            <Link href="/kontakt" className="btn-secondary">
+              Kontakt
+            </Link>
+          )}
         </div>
       ) : null}
     </article>

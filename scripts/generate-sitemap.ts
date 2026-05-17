@@ -7,6 +7,16 @@ if (NEWS.length > 0) console.log('DEBUG: first news sample =', NEWS[0]);
 
 const publicPath = path.resolve(process.cwd(), 'public');
 const sitemapPath = path.join(publicPath, 'sitemap.xml');
+const offerServices = [
+  'nauka-jazdy-konnej',
+  'jazda-konna-dla-dzieci',
+  'jazda-konna-dla-doroslych',
+  'tereny-konne',
+  'polkolonie-jezdzieckie',
+  'vouchery-podarunkowe',
+  'urodziny-w-stajni',
+  'wycieczki-szkolne',
+];
 
 function build() {
   const header = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
@@ -21,6 +31,14 @@ function build() {
     { loc: 'https://stajniadecyma.pl/regulamin', changefreq: 'yearly', priority: '0.5' },
     { loc: 'https://stajniadecyma.pl/kontakt', changefreq: 'monthly', priority: '0.6' },
   ];
+
+  for (const slug of offerServices) {
+    pages.push({
+      loc: `https://stajniadecyma.pl/oferta/${slug}`,
+      changefreq: 'weekly',
+      priority: '0.7',
+    });
+  }
 
   let body = pages.map((p) => `  <url>\n    <loc>${p.loc}</loc>\n    <changefreq>${p.changefreq}</changefreq>\n    <priority>${p.priority}</priority>\n  </url>\n`).join('');
 

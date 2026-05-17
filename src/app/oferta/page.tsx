@@ -1,15 +1,79 @@
 import Image from 'next/image'
+import Link from 'next/link'
+import type { Metadata } from 'next'
+import FaqSection, { buildFaqJsonLd, type FaqItem } from '../../components/FaqSection'
 
-export const metadata = {
+const shareImagePath = '/android-chrome-512x512.png'
+const ofertaDescription =
+  'Oferta Stajni Decyma w Darnawie: jazdy indywidualne, karnety, teren, półkolonie, vouchery i usługi dodatkowe dla osób z Sulechowa, Świebodzina i okolic.'
+
+const ofertaFaqItems: FaqItem[] = [
+  {
+    question: 'Dla kogo są zajęcia w Stajni Decyma?',
+    answer:
+      'Oferta jest przygotowana dla dzieci od 3. roku życia, młodzieży i dorosłych. Prowadzimy zajęcia zarówno dla osób zaczynających, jak i dla jeźdźców rozwijających swoje umiejętności.',
+  },
+  {
+    question: 'Jak zapisać się na jazdę, karnet albo usługę dodatkową?',
+    answer:
+      'Najwygodniej skontaktować się z nami telefonicznie lub przez Facebooka. Pomożemy dobrać odpowiedni rodzaj zajęć, termin i zakres usługi.',
+    content: (
+      <p>
+        Najwygodniej skontaktować się z nami telefonicznie lub przez Facebooka. Możesz też przejść do zakładki{' '}
+        <Link href="/kontakt">Kontakt</Link>, a my pomożemy dobrać odpowiedni rodzaj zajęć, termin i zakres usługi.
+      </p>
+    ),
+  },
+  {
+    question: 'Czy organizujecie półkolonie, vouchery i wydarzenia okolicznościowe?',
+    answer:
+      'Tak. Oprócz regularnych jazd prowadzimy także półkolonie, vouchery podarunkowe, wycieczki szkolne, ogniska, sesje zdjęciowe i przyjęcia okolicznościowe.',
+  },
+  {
+    question: 'Czy wyjazdy w teren są dla każdego?',
+    answer:
+      'Wyjazdy w teren są przeznaczone dla osób, które czują się pewnie w siodle. Standardowo organizujemy je dla minimum dwóch osób.',
+  },
+  {
+    question: 'Gdzie znajdę zasady karnetów i płatności?',
+    answer:
+      'Karnety 4x i 8x są ważne 30 dni, a szczegółowe zasady ich wykorzystania znajdują się w regulaminie. Na miejscu przyjmujemy płatność gotówką lub Blikiem.',
+    content: (
+      <p>
+        Karnety 4x i 8x są ważne 30 dni, a szczegółowe zasady ich wykorzystania opisaliśmy w zakładce{' '}
+        <Link href="/regulamin">Regulamin</Link>. Na miejscu przyjmujemy płatność gotówką lub Blikiem.
+      </p>
+    ),
+  },
+]
+
+export const metadata: Metadata = {
   title: 'Oferta | Stajnia Decyma',
-  description:
-    'Oferta Stajni Decyma: jazdy indywidualne, karnety, półkolonie, imprezy i usługi dodatkowe. Obsługujemy Sulechów, Świebodzin i okolice.',
+  description: ofertaDescription,
   keywords: [
     'jazda konna sulechów',
     'jazda konna świebodzin',
     'oferta stajnia decyma',
     'karnety jeździeckie',
+    'półkolonie jeździeckie lubuskie',
+    'voucher jazda konna lubuskie',
   ],
+  alternates: { canonical: '/oferta' },
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: 'website',
+    locale: 'pl_PL',
+    url: '/oferta',
+    title: 'Oferta | Stajnia Decyma',
+    description: ofertaDescription,
+    images: [{ url: shareImagePath, alt: 'Oferta Stajni Decyma' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Oferta | Stajnia Decyma',
+    description: ofertaDescription,
+    images: [shareImagePath],
+  },
 }
 
 export default function OfertaPage() {
@@ -17,6 +81,10 @@ export default function OfertaPage() {
     <div className="page-bg">
       <section className="card card--text">
         <div className="wrap">
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: buildFaqJsonLd(ofertaFaqItems) }}
+          />
           <h1>Oferta Stajni Decyma - zajęcia i usługi jeździeckie</h1>
           <p>
             W Stajni Decyma dbamy o to, aby każdy - niezależnie od wieku czy poziomu doświadczenia -
@@ -306,6 +374,12 @@ export default function OfertaPage() {
               </figure>
             </div>
           </section>
+
+          <FaqSection
+            heading="Najczęściej zadawane pytania o ofercie"
+            intro="Ta sekcja odpowiada na najczęstsze pytania przed pierwszym kontaktem i porządkuje najważniejsze informacje o zapisach, karnetach i usługach dodatkowych."
+            items={ofertaFaqItems}
+          />
         </div>
       </section>
     </div>
